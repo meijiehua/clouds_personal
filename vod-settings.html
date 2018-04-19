@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>全局设置</title>
+		<script src="script/jquery-1.11.1.min.js" type="text/javascript"></script>
+		<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" title="" rel="stylesheet" />
+		<link title="" href="font/iconfont.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/style.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/services.css" rel="stylesheet" type="text/css" />
+		<script src="bootstrap-3.3.5-dist/js/bootstrap.js" type="text/javascript"></script>
+		<script type="text/javascript" src="script/jquery-accordion-menu.js"></script>
+		<script type="text/javascript" src="layui/layui.js"></script>
+	</head>
+
+	<body>
+		<nav class="nav navbar-mystyle navbar-fixed-top">
+			<div class="navbar-header-dsc pull-left">
+				<a href="#"><img src="img/logox.png"></a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="li-border">
+						<a class="mystyle-color" href="index.html">管理控制台</a>
+					</li>
+					<li class="dropdown pro_ser li-border">
+						<a href="#" class="dropdown-toggle mystyle-color" data-toggle="dropdown">
+							<span>产品与服务</span>
+							<span class="icon-arrow-down icon iconfont icon-sortdesc"></span>
+						</a>
+						<ul class="dropdown-menu dropdown_">
+							<li>
+								<a href="service-live.html">视频直播</a>
+							</li>
+							<li>
+								<a href="service-vod.html">视频点播</a>
+							</li>
+							<li>
+								<a href="video_material.html">视频编辑</a>
+							</li>
+							<li>
+								<a href="service-meeting.html">视频会议</a>
+							</li>
+							<li>
+								<a href="service-mct.html">媒体转码</a>
+							</li>
+							<li>
+								<a href="service-image.html">图片处理</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav pull-right">
+					<li class="li-border user-nam">
+						<a href="#" class="dropdown-toggle mystyle-color">
+							00000000@qq.com
+						</a>
+						<div class="user_cen">
+							<div class="user_cen_list fix">
+								<a href="modfiy_infor.html"><span class="icon iconfont icon-weibiaoti3"></span><span>基本资料</span></a>
+								<a href="modfiy_pass.html"><span class="icon iconfont icon-xiugaimima"></span><span>修改密码</span></a>
+								<a href="modfiy_touxiang.html"><span class="icon iconfont icon-xiugaitouxiang"></span><span>修改头像</span></a>
+								<a href="user_care.html"><span class="icon iconfont icon-uniE6"></span><span>我的关注</span></a>
+							</div>
+							<div class="user_logout_btn">
+								<a href="http://clouds.fanson.cc/?=login.html">退出登录</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!--nav end-->
+		<div class="down-main">
+			<div class="left-main left-off">
+				<div class="sidebar-fold">
+					<span class="icon iconfont icon-menu"></span>
+				</div>
+				<div class="subNavBox">
+					<ul>
+						<li>
+							<a href="service-live.html">
+								<span class="sublist-icon iconfont icon-shipinzhibo"></span>
+								<span class="sub-title">视频直播</span>
+								<div class="Ttitle"><span>视频直播</span></div>
+							</a>
+						</li>
+						<li class="active">
+							<a href="service-vod.html"><span class="sublist-icon iconfont icon-yinshipindianboVOD"></span><span class="sub-title">视频点播</span>
+								<div class="Ttitle"><span>视频点播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="video_material.html"><span class="sublist-icon"><img src="img/videoedit.png" /></span><span class="sub-title">视频编辑</span>
+								<div class="Ttitle"><span>视频编辑</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-meeting.html">
+								<span class="sublist-icon iconfont icon-shipinhuiyi"></span><span class="sub-title">视频互动</span>
+								<div class="Ttitle"><span>视频会议</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-mct.html"><span class="sublist-icon iconfont icon-yinshipinzhuanmaMCT"></span><span class="sub-title">媒体转码</span>
+								<div class="Ttitle"><span>媒体转码</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-image.html"><span class="sublist-icon iconfont icon-img"></span><span class="sub-title">图片处理</span>
+								<div class="Ttitle"><span>图片处理</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="course.html"><span class="sublist-icon iconfont icon-gongcheng" style="font-size: 18px;"></span><span class="sub-title">帮助文档</span>
+								<div class="Ttitle"><span>帮助文档</span></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--left-main end-->
+			<div class="right-service right-product right-off">
+				<div class="right-service-lf">
+					<div class="prodtitle prodnavtit">视频点播</div>
+					<div id="jquery-accordion-menu" class="jquery-accordion-menu">
+						<ul id="demo-list">
+							<li>
+								<a class="classa" href="service-vod.html">点播管理</a>
+							</li>
+							<li class="on">
+								<a class="classa" href="vod-settings.html">全局设置</a>
+							</li>
+							<li>
+								<a class="classa" href="vod-count.html">统计分析</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--right-service-lf end-->
+				<div class="dislpayArrow" onClick="displaynavbar(this)">
+					<div class="dislpayArrow_inner">
+						<div class="dislpayArrow_bg"></div>
+						<div class="dislpayArrow_coll">
+							<span class="icon iconfont icon-zhankai icon-collapse-left"></span>
+							<span class="icon iconfont icon-unfold icon-collapse-right"></span></div>
+					</div>
+				</div>
+				<!--dislpayArrow end-->
+				<div class="right-service-rt">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="console-title border-bottom margin-b2">
+								<h2>设置</h2>
+							</div>
+							<div class=" tab information_tab" role="tabpanel">
+								<!-- Nav tabs -->
+								<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active">
+										<a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">转码设置</a>
+									</li>
+									<li role="presentation">
+										<a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">水印设置</a>
+									</li>
+									<li role="presentation">
+										<a href="#Section3" aria-controls="profile" role="tab" data-toggle="tab">下载设置</a>
+									</li>
+								</ul>
+								<!-- Tab panes -->
+								<div class="tab-content tabs vod-setting">
+									<div role="tabpanel" class="tab-pane fade in active" id="Section1">
+										<div class="transcod-html">
+											<div class="form-group">
+												<button class="btn blue-normal-btn user-tempadd">新增转码模板组</button>
+												<span class="span-help">为便于您进行转码设置，请阅读 
+												<a href="#" target="_blank">使用手册</a>。</span>
+											</div>
+											<div class="form-group">
+												<table class="table table-striped vod-setting-table">
+													<thead>
+														<tr>
+															<th style="width: 500px;">模版组名称</th>
+															<th>类型</th>
+															<th style="padding-left: 20px; width: 200px">操作</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="systemtemplate">
+															<td><em>系统模板组</em><span class="setdefault table-hover-button">设为默认</span></td>
+															<td>系统内置</td>
+															<td>
+																<a href="#" data-value="default" class="vod-edit-btn">编辑</a>
+															</td>
+														</tr>
+														<tr>
+															<td class="templategroup-name"><em>我的模板组1</em><span class="setdefault table-hover-button">设为默认</span></td>
+															<td>用户自定义</td>
+															<td class="tempdel">
+																<a href="#" data-value="user-defined" class="vod-edit-btn">编辑</a>
+																<span style="color: #C3C5C6">|</span>
+																<a href="#" class="btn-delete" data-toggle="modal" data-target="#myModal">删除</a>
+															</td>
+														</tr>
+														<tr>
+															<td class="templategroup-name"><em>mmmmmmmmmmmm</em><span class="setdefault table-hover-button">设为默认</span></td>
+															<td>用户自定义</td>
+															<td class="tempdel">
+																<a href="#" data-value="user-defined" class="vod-edit-btn">编辑</a>
+																<span style="color: #C3C5C6">|</span>
+																<a href="#" class="btn-delete" data-toggle="modal" data-target="#myModal">删除</a>
+															</td>
+														</tr>
+														<tr>
+															<td class="templategroup-name"><em>我的模板组</em><span class="table-button-1">默认</span></td>
+															<td>用户自定义</td>
+															<td class="tempdel">
+																<a href="#" data-value="user-defined" class="vod-edit-btn">编辑</a>
+																<span style="color: #C3C5C6">|</span>
+																<a href="#" class="btn-disabled">删除</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Section2">
+										<div class="watermark-html">
+											<div class="pull-right margin-b2">
+												<button class="btn btn-default enable-water" data-toggle="modal" data-target="#myModal">启用水印</button>
+												<button class="btn blue-normal-btn add-water" data-toggle="modal" data-target="#myModal">添加水印</button>
+											</div>
+											<div class="watermarkList clearfix">
+												<table class="table table-hover vod-setting-table">
+													<thead>
+														<tr>
+															<th class="col-sm-2">序号</th>
+															<th class="col-sm-2">预览</th>
+															<th class="col-sm-2">是否默认</th>
+															<th class="col-sm-2">上传时间</th>
+															<th class="col-sm-2 text-left">操作</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1</td>
+															<td></td>
+															<td class="yesorno">否</td>
+															<td>2017-09-15 10:42:16</td>
+															<td>
+																<a href="#" class="water-edit anopading" data-toggle="modal" data-target="#myModal">编辑</a>
+																<span style="color: #C3C5C6">|</span>
+																<a href="#" class="watermark-del anopading" data-toggle="modal" data-target="#myModal">删除</a>
+																<span style="color: #C3C5C6">|</span>
+																<a href="#" class="watermark-def anopading" data-toggle="modal" data-target="#myModal">设为默认</a>
+															</td>
+														</tr>
+														<tr>
+															<td>2</td>
+															<td></td>
+															<td class="yesorno text-success">是</td>
+															<td>2017-10-17 17:57:51</td>
+															<td>
+																<a href="#" class="water-edit anopading" data-toggle="modal" data-target="#myModal">编辑</a>
+																<span style="color: #C3C5C6">|</span>
+																<a class="watermark-nodel anopading btn-disabled">删除</a>
+																<span style="color: #C3C5C6">|</span>
+																<a class="watermark-def anopading btn-disabled">设为默认</a>
+															</td>
+														</tr>
+														<tr>
+															<td>3</td>
+															<td></td>
+															<td class="yesorno">否</td>
+															<td>2017-10-25 12:42:16</td>
+															<td>
+																<a href="#" class="water-edit anopading" data-toggle="modal" data-target="#myModal">编辑</a>
+																<span style="color: #C3C5C6">|</span>
+																<a href="#" class="watermark-del anopading" data-toggle="modal" data-target="#myModal">删除</a>
+																<span style="color: #C3C5C6">|</span>
+																<a href="#" class="watermark-def anopading" data-toggle="modal" data-target="#myModal">设为默认</a>
+															</td>
+														</tr>
+														<tr>
+															<td>4</td>
+															<td></td>
+															<td class="yesorno">是</td>
+															<td>2017-11-07 17:03:43</td>
+															<td>
+																<a href="#" class="water-edit anopading" data-toggle="modal" data-target="#myModal">编辑</a>
+																<span style="color: #C3C5C6">|</span>
+																<a href="#" class="watermark-del anopading" data-toggle="modal" data-target="#myModal">删除</a>
+																<span style="color: #C3C5C6">|</span>
+																<a href="#" class="watermark-def anopading" data-toggle="modal" data-target="#myModal">设为默认</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Section3">
+										<div class="censored-setting-html">
+											<form>
+												<div class="form-group">
+													<label class="setting-label">下载功能</label>
+													<div class="inline-block" style="margin-top: 5px;">
+														<div class="ckbx-style-8">
+															<input type="checkbox" id="ckbx-style-8" checked value="0" name="ckbx-style-8">
+															<label for="ckbx-style-8" id="ckbx-style-8-label"></label>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--end-->
+						</div>
+					</div>
+				</div>
+				<!--right-service-rt end-->
+			</div>
+			<!--right-product end-->
+		</div>
+		<!--down-main end-->
+		<!--modal start-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">  
+                    <span aria-hidden="true">×</span>  
+                </button>
+						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					</div>
+					<div class="modal-body"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--modal end-->
+		<!--kkkkkkkkkkkkkkkkkkkkk-->
+		<div class="templat-mask"></div>
+		<div class="templat-modal default">
+			<div class="templat-modal-dialog">
+				<div class="templat-modal-content">
+					<div class="templat-modal-header">
+						<button type="button" class="close">  
+		                    <span>×</span>  
+		                </button>
+						<h4>模版组详情</h4>
+					</div>
+					<form>
+						<div class="templat-modal-body trans-code-model clearfix">
+							<div class="form-group">
+								<label class="control-label">模板名称：</label>
+								<span class="inline-block" style="margin-left: 10px;">系统模板组</span>
+							</div>
+							<div class="form-group">
+								<div>
+									<label class="control-label">模板详情：</label>
+									<span style="margin-left: 10px;color:#9B9EA0;">（系统模版清晰度、分辨率和码率为默认设置，不可修改）</span>
+								</div>
+								<fieldset>
+									<table class="table table-condensed vod-setting-table">
+										<thead>
+											<tr>
+												<th>清晰度</th>
+												<th>码率(Kbps) <span class="span-help-2 icon iconfont icon-wenhao1" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-original-title="码率输入范围400-50000(Kbps)，区分清晰度控制，建议按照推荐码率设置"></span>
+												</th>
+												<th>分辨率(宽*高) <span class="span-help-2 icon iconfont icon-wenhao1" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-original-title="分辨率输入范围128*128-1920*1080（Px），区分清晰度控制，建议按照推荐分辨率设置"></th>
+												<th class="text-center">HLS</th><th class="text-center">MP4</th>
+												<th class="text-center">加密<span class="span-help-2 icon iconfont icon-wenhao1" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-original-title="对视频进行加密转码，加密后的视频需要解密后才能播放，当前支持对HLS格式加密"></span>
+												</th>
+												<th class="text-center">水印<span class="span-help-2 icon iconfont icon-wenhao1" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-original-title="对视频进行加水印处理，需要在水印设置中添加素材并开启水印后生效"></span>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>流畅</td>
+												<td>400</td>
+												<td>640*360</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox system-format" id="HLS" checked="checked">
+														<label for="HLS" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox system-format" id="MP4" checked="checked">
+														<label for="MP4" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox" id="jiami">
+														<label for="jiami" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox" id="shuiyin">
+														<label for="shuiyin" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td>标清</td>
+												<td>900</td>
+												<td>960*540</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox system-format" id="HLS01">
+														<label for="HLS01" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox system-format" id="MP401">
+														<label for="MP401" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox system-format" id="jiami01">
+														<label for="jiami01" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox system-format" id="shuiyin01">
+														<label for="shuiyin01" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td>高清<span class="charge">收费</span></td>
+												<td>1500</td>
+												<td>1280*720</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox system-format" id="HLS02">
+														<label for="HLS02" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox system-format" id="MP402">
+														<label for="MP402" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox" id="jiami02">
+														<label for="jiami02" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox" id="shuiyin02">
+														<label for="shuiyin02" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td>超清<span class="charge">收费</span></td>
+												<td>3000</td>
+												<td>1920*1080</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox system-format" id="HLS03">
+														<label for="HLS03" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox system-format" id="MP403">
+														<label for="MP403" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox" id="jiami03">
+														<label for="jiami03" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox" id="shuiyin03">
+														<label for="shuiyin03" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td>原画</td>
+												<td>原始码率</td>
+												<td>原始分辨率</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox" id="HLS04">
+														<label for="HLS04" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox" id="MP404">
+														<label for="MP404" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox" id="jiami04">
+														<label for="jiami04" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox" id="shuiyin04" disabled="disabled">
+														<label for="shuiyin04" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</fieldset>
+							</div>
+						</div>
+						<div class="templat-modal-footer">
+							<button type="button" class="btn btn-primary">确定</button>
+							<button type="button" class="btn btn-default">取消</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--default end-->
+		<div class="templat-modal user-defined">
+			<div class="templat-modal-dialog">
+				<div class="templat-modal-content">
+					<div class="templat-modal-header">
+						<button type="button" class="close">  
+		                    <span>×</span>  
+		                </button>
+						<h4>模版组详情</h4>
+					</div>
+					<form>
+						<div class="templat-modal-body trans-code-model clearfix">
+							<div class="form-group">
+								<label class="control-label">模板名称：</label>
+								<div class="inline-block">
+									<input type="text" required class="form-control" value="我的模版组1" style="height: 28px;margin-left: 10px;width: 280px;">
+								</div>
+							</div>
+							<div class="form-group">
+								<div>
+									<label class="control-label">模板详情：</label>
+									<span style="margin-left: 10px;color:#9B9EA0;">（同一清晰度，格式不能相同）</span>
+								</div>
+								<fieldset>
+									<table class="table table-condensed vod-setting-table user-defined-table">
+										<thead>
+											<tr>
+												<th>清晰度</th>
+												<th>码率(Kbps) <span class="span-help-2 icon iconfont icon-wenhao1" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-original-title="码率输入范围400-50000(Kbps)，区分清晰度控制，建议按照推荐码率设置"></span>
+												</th>
+												<th>分辨率(宽*高) <span class="span-help-2 icon iconfont icon-wenhao1" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-original-title="分辨率输入范围128*128-1920*1080（Px），区分清晰度控制， 建议按照推荐分辨率设置"></th>
+												<th>格式</th>
+												<th class="text-center">加密<span class="span-help-2 icon iconfont icon-wenhao1" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-original-title="对视频进行加密转码，加密后的视频需要解密后才能播放，当前支持对HLS格式加密"></span>
+												</th>
+												<th class="text-center">水印<span class="span-help-2 icon iconfont icon-wenhao1" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-original-title="对视频进行加水印处理，需要在水印设置中添加素材并开启水印后生效"></span>
+												</th>
+												<th>操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="user-templa">
+												<td data-value="0">流畅</td>
+												<!--<td data-value="1">标清</td><td data-value="2">高清</td><td data-value="3">超清</td>-->
+												<td><input type="number" data-toggle="tooltip" data-trigger="focus" data-animation="true" value="400" class="form-control rate" style="width: 60px;height: 28px;"></td>
+												<td><input type="number" data-toggle="tooltip" data-trigger="focus" data-animation="true" value="640" class="form-control inline-block ratio-w" style="width:40px;height: 28px;"> x
+													<input type="number" data-toggle="tooltip" data-trigger="focus" data-animation="true" value="360" class="form-control inline-block ratio-h" style="width:40px;height: 28px;"></td>
+												<td>
+													<select class="form-control" style="width: 120px;">
+														<option>MP4</option>
+														<option>HLS</option>
+													</select>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox" id="u-jiami" disabled="disabled">
+														<label for="u-jiami" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td class="text-center">
+													<span>
+														<input type="checkbox" class="vod-checkbox" id="u-shuiyin" checked>
+														<label for="u-shuiyin" class="vod-checkbox-label"></label>
+													</span>
+												</td>
+												<td>
+													<a href="#" class="user-delete anopading">删除</a>
+												</td>
+											</tr>
+											<tr class="divisiontr">
+												<td colspan="7">
+													<a href="#" class="user-tempadd anopading">+ 添加</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</fieldset>
+							</div>
+						</div>
+						<div class="templat-modal-footer">
+							<button type="button" class="btn btn-primary">确定</button>
+							<button type="button" class="btn btn-default">取消</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--user-defined end-->
+		<!--alert -->
+		<div class="growl"></div>
+		<div class="growl01"></div>
+		<!--alert end-->
+		<!--<div id="mydiv1"><i></i><span class="text-center"></span></div>-->
+		<script type="text/javascript" src="script/style.js"></script>
+		<script type="text/javascript" src="script/vod.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+				//伸缩menu
+				jQuery("#jquery-accordion-menu").jqueryAccordionMenu();
+				$("#demo-list li").click(function() {
+					if($(this).hasClass("active")) {
+						$(this).removeClass("active");
+					} else {
+						$(this).addClass("active");
+					}
+				})
+				//
+			});
+		</script>
+	</body>
+
+</html>

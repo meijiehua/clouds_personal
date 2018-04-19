@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>视频点播</title>
+		<script src="script/jquery-1.11.1.min.js" type="text/javascript"></script>
+		<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" title="" rel="stylesheet" />
+		<link title="" href="font/iconfont.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/style.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/services.css" rel="stylesheet" type="text/css" />
+		<script src="bootstrap-3.3.5-dist/js/bootstrap.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<nav class="nav navbar-mystyle navbar-fixed-top">
+			<div class="navbar-header-dsc pull-left">
+				<a href="#"><img src="img/logox.png"></a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="li-border">
+						<a class="mystyle-color" href="index.html">管理控制台</a>
+					</li>
+					<li class="dropdown pro_ser li-border">
+						<a href="#" class="dropdown-toggle mystyle-color" data-toggle="dropdown">
+							<span>产品与服务</span>
+							<span class="icon-arrow-down icon iconfont icon-sortdesc"></span>
+						</a>
+						<ul class="dropdown-menu dropdown_">
+							<li>
+								<a href="service-live.html">视频直播</a>
+							</li>
+							<li>
+								<a href="service-vod.html">视频点播</a>
+							</li>
+							<li>
+								<a href="video_material.html">视频编辑</a>
+							</li>
+							<li>
+								<a href="service-meeting.html">视频会议</a>
+							</li>
+							<li>
+								<a href="service-mct.html">媒体转码</a>
+							</li>
+							<li>
+								<a href="service-image.html">图片处理</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav pull-right">
+					<li class="li-border user-nam">
+						<a href="#" class="dropdown-toggle mystyle-color" data-toggle="dropdown">
+							00000000@qq.com
+						</a>
+						<div class="user_cen">
+							<div class="user_cen_list fix">
+								<a href="#"><span class="icon iconfont icon-weibiaoti3"></span><span>修改资料</span></a>
+								<a href="#"><span class="icon iconfont icon-xiugaimima"></span><span>修改密码</span></a>
+								<a href="#"><span class="icon iconfont icon-xiugaitouxiang"></span><span>修改头像</span></a>
+								<a href="#"><span class="icon iconfont icon-uniE6"></span><span>我的关注</span></a>
+							</div>
+							<div class="user_logout_btn">
+								<a href="http://clouds.fanson.cc/?=login.html">退出登录</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!--nav end-->
+		<div class="down-main">
+			<div class="left-main left-off">
+				<div class="sidebar-fold">
+					<span class="icon iconfont icon-menu"></span>
+				</div>
+				<div class="subNavBox">
+					<ul>
+						<li>
+							<a href="service-live.html">
+								<span class="sublist-icon iconfont icon-shipinzhibo"></span>
+								<span class="sub-title">视频直播</span>
+								<div class="Ttitle"><span>视频直播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-vod.html"><span class="sublist-icon iconfont icon-yinshipindianboVOD"></span><span class="sub-title">视频点播</span>
+								<div class="Ttitle"><span>视频点播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="video_material.html"><span class="sublist-icon"><img src="img/videoedit.png" /></span><span class="sub-title">视频编辑</span>
+								<div class="Ttitle"><span>视频编辑</span></div>
+							</a>
+						</li>
+						<li class="active">
+							<a href="service-meeting.html">
+								<span class="sublist-icon iconfont icon-shipinhuiyi"></span><span class="sub-title">视频互动</span>
+								<div class="Ttitle"><span>视频会议</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-mct.html"><span class="sublist-icon iconfont icon-yinshipinzhuanmaMCT"></span><span class="sub-title">媒体转码</span>
+								<div class="Ttitle"><span>媒体转码</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-image.html"><span class="sublist-icon iconfont icon-img"></span><span class="sub-title">图片处理</span>
+								<div class="Ttitle"><span>图片处理</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="course.html"><span class="sublist-icon iconfont icon-gongcheng" style="font-size: 18px;"></span><span class="sub-title">帮助文档</span>
+								<div class="Ttitle"><span>帮助文档</span></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--left-main end-->
+			<div class="right-service right-product right-off">
+				<div class="right-service-lf">
+					<h2>视频点播</h2>
+					<div id="jquery-accordion-menu" class="jquery-accordion-menu">
+						<ul id="demo-list">
+							<li class="on">
+								<a href="service-live.html">点播管理</a>
+							</li>
+							<li>
+								<a href="javascript:">全局设置</a>
+								<ul class="submenu">
+									<li>
+										<a href="vod-transcode.html"><span></span>转码设置</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="javascript:">统计分析</a>
+								<ul class="submenu">
+									<li>
+										<a href="vod-count-issue.html"><span></span>分发</a>
+									</li>
+									<li>
+										<a href="vod-count-play.html"><span></span>播放</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--right-service-lf end-->
+				<div class="dislpayArrow" onClick="displaynavbar(this)">
+					<div class="dislpayArrow_inner">
+						<div class="dislpayArrow_bg"></div>
+						<div class="dislpayArrow_coll">
+							<span class="icon iconfont icon-zhankai icon-collapse-left"></span>
+							<span class="icon iconfont icon-unfold icon-collapse-right"></span></div>
+					</div>
+				</div>
+				<!--dislpayArrow end-->
+				<div class="right-service-rt">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="console-title border-bottom">
+								<h2>视频点播</h2>
+							</div>
+							<div class="action-toolbar fix">
+								<div class="pull-left form-inline" style="width:850px">
+									<select class="form-control">
+										<option value="1">按时间查询</option>
+										<option value="2">按上传文件名查询</option>
+										<option value="3">按媒体ID查询</option>
+									</select>
+									<div class="inline-block time_slot">
+										<span style="margin-left: 2em;">时间范围</span>
+										<input type="text" readonly="readonly" class="form-control" id="start_time">
+										<span class="datepicker-step">-</span>
+										<input type="text" readonly="readonly" class="form-control" id="end_time">
+										<button class="btn btn-primary col-margin">查询</button>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control search_input" placeholder="请输入点播名称进行搜索">
+										<span class="input-group-btn">
+									        <button class="btn btn-default" type="button">搜索</button>
+									      </span>
+									</div>
+								</div>
+								<div class="pull-right upload-mng" style="line-height:34px">
+									<em class="ng-binding">0/0</em>
+									<a>查看上传任务</a>
+									<button class="btn btn-primary">上传视频</button>
+								</div>
+							</div>
+							<!--action-toolbar end-->
+							<div class="table-responsive">
+								<table class="table table-bordered table-striped live-table">
+									<thead>
+										<tr>
+											<th>点播名称</th>
+											<th>转码模版</th>
+											<th>视频原大小</th>
+											<th>时长</th>
+											<th>创建时间</th>
+											<th>状态</th>
+											<th>分类</th>
+											<th>操作</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="even pointer">
+											<td class="vod-name">
+												<a href="javascript:">2017年西综解读及应考技巧</a><span class="iconfont icon-img thumbnail-img" data-toggle="modal" data-target="#myModal"></span><img src="img/care.jpg" alt=""></td>
+											<td class="Transcoding-temp">mmvod.inbuilt.hls<span class="iconfont icon-xiangqing" data-toggle="modal" data-target="#myModal"></span></td>
+											<td>78.6M </td>
+											<td>00:02:48</td>
+											<td>2017-06-29 17:30 </td>
+											<td class="Release">发布</td>
+											<td>默认分类</td>
+											<td>
+												<a href="bulit-vod.html">编辑</a>&nbsp;|&nbsp;
+												<a href="javascript:" class="operation-del">删除</a>&nbsp;|&nbsp;
+												<a href="javascript:" class="operation-Release" data-toggle="modal" data-target="#myModal">取消发布</a>&nbsp;|&nbsp;
+												<a href="javascript:" class="share-vod">分享</a>
+											</td>
+										</tr>
+										<tr class="odd pointer">
+											<td class="vod-name">
+												<span class="SErial-name"></span>
+												<a href="javascript:">有情怀的思想家</a><span class="iconfont icon-img thumbnail-img" data-toggle="modal" data-target="#myModal"></span><img src="img/care1.jpg" alt=""></td>
+											<td class="Transcoding-temp">dfdvod.inbuilt.hls<span class="iconfont icon-xiangqing" data-toggle="modal" data-target="#myModal"></span></td>
+											<td>78.6M </td>
+											<td>00:02:48</td>
+											<td>2017-06-29 17:30 </td>
+											<td class="Release">未发布</td>
+											<td>默认分类</td>
+											<td>
+												<a href="bulit-vod.html">编辑</a>&nbsp;|&nbsp;
+												<a href="javascript:" class="operation-del">删除</a>&nbsp;|&nbsp;
+												<a href="javascript:" class="operation-Release" data-toggle="modal" data-target="#myModal">发布</a>&nbsp;|&nbsp;
+												<a href="javascript:" class="share-vod">分享</a>
+
+											</td>
+										</tr>
+										<tr class="Serialtr">
+											<td class="vod-name">
+												<span class="serial-name"></span>
+												<a href="javascript:">2017年西综解读及应考技巧01</a><span class="iconfont icon-img thumbnail-img" data-toggle="modal" data-target="#myModal"></span><img src="img/care1.jpg" alt=""></td>
+											<td class="Transcoding-temp">opqvod.inbuilt.hls<span class="iconfont icon-xiangqing" data-toggle="modal" data-target="#myModal"></span></td>
+											<td>78.6M </td>
+											<td>00:02:48</td>
+											<td>2017-06-29 17:30 </td>
+											<td>未发布</td>
+											<td>默认分类</td>
+											<td>
+												<a href="Serialtr-vod.html">编辑</a>&nbsp;|&nbsp;
+												<a href="javascript:" class="operation-del">删除</a>&nbsp;|&nbsp;
+												<a href="javascript:" class="share-vod">分享</a>
+											</td>
+										</tr>
+										<tr class="Serialtr">
+											<td class="vod-name">
+												<span class="serial-name"></span>
+												<a href="javascript:">有情怀的思想家01</a><span class="iconfont icon-img thumbnail-img" data-toggle="modal" data-target="#myModal"></span><img src="img/care1.jpg" alt=""></td>
+											<td class="Transcoding-temp">mpervod.inbuilt.hls<span class="iconfont icon-xiangqing" data-toggle="modal" data-target="#myModal"></span></td>
+											<td>78.6M </td>
+											<td>00:02:48</td>
+											<td>2017-06-29 17:30 </td>
+											<td>未发布</td>
+											<td>默认分类</td>
+											<td>
+												<a href="Serialtr-vod.html">编辑</a>&nbsp;|&nbsp;
+												<a href="javascript:" class="operation-del">删除</a>&nbsp;|&nbsp;
+												<a href="javascript:" class="share-vod">分享</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--table-responsive end-->
+						</div>
+					</div>
+				</div>
+				<!--right-service-rt end-->
+			</div>
+			<!--right-product end-->
+		</div>
+		<!--down-main end-->
+		<script type="text/javascript" src="script/style.js"></script>
+		<script type="text/javascript" src="script/service-vod.js"></script>
+		<script type="text/javascript" src="script/laydate.dev.js"></script>
+		<script type="text/javascript">
+			laydate({
+				elem: '#start_time'
+			});
+			laydate({
+				elem: '#end_time'
+			});
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="script/jquery-1.11.1.min.js"></script>
+	</head>
+
+	<body>
+
+		<img src="img/9b297da3139532f3c095c6b9d75c2881.jpg" id="exampleJpg" />
+		<script>
+		var arr=window.location.search.split(",");
+			$("#exampleJpg").css({"display": "inline-block","width": arr[0] + "px","height":arr[1] + "px","verticalAlign": "middle"})
+			$("body").css({"backgroundColor": "#000000","textAlign": "center","padding": 0,"margin": 0,"lineHeight":$(document).height() + "px"});
+		</script>
+	</body>
+
+</html>

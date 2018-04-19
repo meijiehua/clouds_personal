@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>媒体转码</title>
+		<script src="script/jquery-1.11.1.min.js" type="text/javascript"></script>
+		<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" title="" rel="stylesheet" />
+		<link title="" href="font/iconfont.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/style.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/services.css" rel="stylesheet" type="text/css" />
+		<script src="bootstrap-3.3.5-dist/js/bootstrap.js" type="text/javascript"></script>
+		<script type="text/javascript" src="laydate/laydate.js"></script>
+		<script type="text/javascript" src="script/jquery-accordion-menu.js"></script>
+		<script type="text/javascript" src="script/template.js"></script>
+	</head>
+
+	<body>
+		<nav class="nav navbar-mystyle navbar-fixed-top">
+			<div class="navbar-header-dsc pull-left">
+				<a href="#"><img src="img/logox.png"></a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="li-border">
+						<a class="mystyle-color" href="index.html">管理控制台</a>
+					</li>
+					<li class="dropdown pro_ser li-border">
+						<a href="#" class="dropdown-toggle mystyle-color" data-toggle="dropdown">
+							<span>产品与服务</span>
+							<span class="icon-arrow-down icon iconfont icon-sortdesc"></span>
+						</a>
+						<ul class="dropdown-menu dropdown_">
+							<li>
+								<a href="service-live.html">视频直播</a>
+							</li>
+							<li>
+								<a href="service-vod.html">视频点播</a>
+							</li>
+							<li>
+								<a href="video_material.html">视频编辑</a>
+							</li>
+							<li>
+								<a href="service-meeting.html">视频会议</a>
+							</li>
+							<li>
+								<a href="service-mct.html">媒体转码</a>
+							</li>
+							<li>
+								<a href="service-image.html">图片处理</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav pull-right">
+					<li class="li-border user-nam">
+						<a href="#" class="dropdown-toggle mystyle-color">
+							00000000@qq.com
+						</a>
+						<div class="user_cen">
+							<div class="user_cen_list fix">
+								<a href="modfiy_infor.html"><span class="icon iconfont icon-weibiaoti3"></span><span>基本资料</span></a>
+								<a href="modfiy_pass.html"><span class="icon iconfont icon-xiugaimima"></span><span>修改密码</span></a>
+								<a href="modfiy_touxiang.html"><span class="icon iconfont icon-xiugaitouxiang"></span><span>修改头像</span></a>
+								<a href="user_care.html"><span class="icon iconfont icon-uniE6"></span><span>我的关注</span></a>
+							</div>
+							<div class="user_logout_btn">
+								<a href="http://clouds.fanson.cc/?=login.html">退出登录</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!--nav end-->
+		<div class="down-main">
+			<div class="left-main left-off">
+				<div class="sidebar-fold">
+					<span class="icon iconfont icon-menu"></span>
+				</div>
+				<div class="subNavBox">
+					<ul>
+						<li>
+							<a href="service-live.html">
+								<span class="sublist-icon iconfont icon-shipinzhibo"></span>
+								<span class="sub-title">视频直播</span>
+								<div class="Ttitle"><span>视频直播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-vod.html"><span class="sublist-icon iconfont icon-yinshipindianboVOD"></span><span class="sub-title">视频点播</span>
+								<div class="Ttitle"><span>视频点播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="video_material.html"><span class="sublist-icon"><img src="img/videoedit.png" /></span><span class="sub-title">视频编辑</span>
+								<div class="Ttitle"><span>视频编辑</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-meeting.html">
+								<span class="sublist-icon iconfont icon-shipinhuiyi"></span><span class="sub-title">视频互动</span>
+								<div class="Ttitle"><span>视频会议</span></div>
+							</a>
+						</li>
+						<li class="active">
+							<a href="service-mct.html"><span class="sublist-icon iconfont icon-yinshipinzhuanmaMCT"></span><span class="sub-title">媒体转码</span>
+								<div class="Ttitle"><span>媒体转码</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-image.html"><span class="sublist-icon iconfont icon-img"></span><span class="sub-title">图片处理</span>
+								<div class="Ttitle"><span>图片处理</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="course.html"><span class="sublist-icon iconfont icon-gongcheng" style="font-size: 18px;"></span><span class="sub-title">帮助文档</span>
+								<div class="Ttitle"><span>帮助文档</span></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--left-main end-->
+			<div class="right-service right-product right-off">
+				<div class="right-service-lf">
+					<div class="prodtitle prodnavtit">MTS控制台</div>
+					<div id="jquery-accordion-menu" class="jquery-accordion-menu">
+						<ul id="demo-list">
+							<li class="on">
+								<a class="classa" href="service-mct.html">文件转码管理</a>
+							</li>
+							<li class="firstli">
+								<a class="classa" href="javascript:">媒体管理</a>
+								<ul class="submenu">
+									<li>
+										<a class="classb" href="MCT-library.html"><span></span>媒体库</a>
+									</li>
+									<li>
+										<a class="classb" href="MCT-setup.html"><span></span>媒体库设置</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a class="classa" href="MCT-overall-setup.html">全局设置</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--right-service-lf end-->
+				<div class="dislpayArrow" onClick="displaynavbar(this)">
+					<div class="dislpayArrow_inner">
+						<div class="dislpayArrow_bg"></div>
+						<div class="dislpayArrow_coll">
+							<span class="icon iconfont icon-zhankai icon-collapse-left"></span>
+							<span class="icon iconfont icon-unfold icon-collapse-right"></span></div>
+					</div>
+				</div>
+				<!--dislpayArrow end-->
+				<div class="right-service-rt">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="console-title border-bottom">
+								<h2>文件转码任务列表</h2>
+							</div>
+							<div class="clearfix osstool">
+								<div class="pull-left">
+									<span>管道：</span>
+									<select style="width: 100px;">
+										<option>全部</option>
+									</select>
+								</div>
+								<div class="pull-left">
+									<span style="margin-left:2em;">转码状态：</span>
+									<select style="width: 80px;">
+										<option>全部</option>
+										<option>已提交</option>
+										<option selected>转码中</option>
+										<option>转码成功</option>
+										<option>转码失败</option>
+										<option>已取消</option>
+									</select>
+								</div>
+								<div class="form-inline inline-block time_slot">
+									<span style="margin-left:2em;">时间范围：</span>
+									<input type="text" readonly="readonly" class="form-control timecho" id="mct-filtertime01">
+									<span class="datepicker-step">-</span>
+									<input type="text" readonly="readonly" class="form-control timecho" id="mct-filtertime02">
+									<button class="btn btn-primary col-margin">查询</button>
+								</div>
+								<div class="pull-right" style="font-size: 0;">
+									<a href="course.html" class="inline-block course">转码教程</a>
+									<button class="btn btn-default" id="transcoding_refresh">
+										<span class="glyphicon glyphicon-refresh"></span>刷新
+									</button>
+									<button data-toggle="modal" data-target="#myModal" class="btn btn-primary" id="bulit_MCt_btn">新建转码</button>
+								</div>
+							</div>
+							<!--osstool end-->
+							<div class="table-responsive">
+								<table class="table table-hover MCT-table" style="margin-bottom: 56px;">
+									<thead>
+										<tr>
+											<th class="col-sm-2">输出文件名/转码ID</th>
+											<th class="col-sm-1">转码模板</th>
+											<th class="col-sm-1">转码状态</th>
+											<th class="col-sm-1 text-center">添加时间</th>
+											<th class="col-sm-2">Object地址</th>
+										</tr>
+									</thead>
+									<tbody id="transcoding_list">
+										<tr>
+											<td class="col-sm-2">
+												<p>fffffff</p>
+												<p>ID:
+													<a href="MCT-info.html">ac04c2902c2b4281a8ac725322c79dac</a>
+												</p>
+											</td>
+											<td class="col-sm-1">转封装-FLV</td>
+											<td class="col-sm-1 text-impo">转码失败</td>
+											<td class="col-sm-1 text-center">2017-12-05 11:08:08</td>
+											<td class="col-sm-2">
+												<span class="transcoding_span" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="http://myfirstbucketlong.oss-cn-beijing.aliyuncs.com/m3u8SegementIn80/eeee.mp4">http://myfirstbucketlong.oss-cn-beijing.aliyuncs.com/m3u8SegementIn80/eeee.mp4</span>
+											</td>
+										</tr>
+										<tr>
+											<td class="col-sm-2">
+												<p>movi.m3u8</p>
+												<p>ID:
+													<a href="MCT-info.html">e5f5d12a265645998ecb124dce05eeb0</a>
+												</p>
+											</td>
+											<td class="col-sm-1">全平台(M3U8)-LD</td>
+											<td class="col-sm-1 text-success">转码成功</td>
+											<td class="col-sm-1 text-center">2017-12-04 11:14:25</td>
+											<td class="col-sm-2">
+												<span class="transcoding_span" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="http://myfirstbucketlong.oss-cn-beijing.aliyuncs.com/m3u8MultibitrateIn83/movi.mp4">http://myfirstbucketlong.oss-cn-beijing.aliyuncs.com/m3u8MultibitrateIn83/movi.mp4</span>
+											</td>
+										</tr>
+										<tr>
+											<td class="col-sm-2">
+												<p>movi.m3u8</p>
+												<p>ID:
+													<a href="MCT-info.html">e5f5d12a265645998ecb124dce05eeb0</a>
+												</p>
+											</td>
+											<td class="col-sm-1">全平台(M3U8)-LD</td>
+											<td class="col-sm-1 text-success">转码成功</td>
+											<td class="col-sm-1 text-center">2017-12-04 11:14:25</td>
+											<td class="col-sm-2">
+												<span class="transcoding_span" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="http://myfirstbucketlong.oss-cn-beijing.aliyuncs.com/m3u8MultibitrateIn83/movi.mp4">http://myfirstbucketlong.oss-cn-beijing.aliyuncs.com/m3u8MultibitrateIn83/movi.mp4</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<!--MCT-table end-->
+								<table class="table table-fixed">
+									<tfoot>
+										<tr>
+											<td colspan="5">
+												<div class="pull-right">
+													<div class="pagination-info inline-block">
+														<span class="pageNum">共有4条</span>
+														<span class="pageNumset">每页显示：10条</span>
+													</div>
+													<ul class="pagination" style="margin: 0;vertical-align: middle;">
+														<li class="disabled">
+															<a href="#">«</a>
+														</li>
+														<li class="disabled">
+															<a href="#">‹</a>
+														</li>
+														<li class="active">
+															<a href="#">1 <span class="sr-only">(current)</span></a>
+														</li>
+														<li class="disabled">
+															<a href="#">›</a>
+														</li>
+														<li class="disabled">
+															<a href="#">»</a>
+														</li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+								<div class="loadBox hide">
+									<div class="loader">Loading...</div>
+								</div>
+								<!--loadBox end-->
+							</div>
+							<!--table-responsive end-->
+						</div>
+					</div>
+				</div>
+				<!--right-service-rt end-->
+			</div>
+			<!--right-product end-->
+		</div>
+		<!--down-main end-->
+		<!--modal start-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-backdrop="false" data-keyboard="false">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">  
+                    <span aria-hidden="true">×</span>  
+                </button>
+						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					</div>
+					<div class="modal-body"></div>
+					<div class="modal-footer"></div>
+				</div>
+			</div>
+		</div>
+		<!--modal end-->
+		<div class="growl"></div>
+		<!--end-->
+		<script type="text/html" id="bulitMct">
+			<div class="mct-step">
+				<ul class="console-step row">
+					<li class="col-md-6 step step-first step-active">转码基础设定</li>
+					<li class="col-md-6 step step-end">转码模版选择</li>
+				</ul>
+			</div>
+			<div class="row Newmct_step01">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<div class="col-sm-3 control-label">
+							<span class="text-impo">*</span>待转码文件地址：
+						</div>
+						<div class="col-sm-7">
+							<input type="text" readonly class="form-control" id="newmct-url01" style="background-color: #EEEEEE!important;">
+						</div>
+						<div class="col-sm-2 mctfi">
+							<a class="btn btn-primary">浏览</a>
+							<input type="file" id="filemct">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3 control-label">
+							<span class="text-impo">*</span>转码管道：
+						</div>
+						<div class="col-sm-8">
+							<select class="form-control" id="newmct-piping">
+								<option selected="selected">mts-service-pipeline</option>
+								<option>cvkdhfuiv</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3 control-label">
+							<span class="text-impo">*</span>输出文件名：
+						</div>
+						<div class="col-sm-8">
+							<input type="text" tabindex="0" data-toggle="popover" data-content="<ul><li>1.可包含英文、数字、中文、常见标点符号</li><li>2.名称长度限制在64个字节之内</li><li>3.m3u8文件不需要加后缀名</li></ul>" class="form-control" id="newmct-name">
+							<div class="help-block">
+								<small class="text-impo hide" id="output_name01">
+									<span class="icon iconfont icon-androidcancel"></span>输出对象不能为空
+								</small>
+								<small class="text-impo hide" id="output_name02">
+									<span class="icon iconfont icon-androidcancel"></span>输出对象格式不正确
+								</small>
+								<small class="text-impo hide" id="output_name03">
+									<span class="icon iconfont icon-androidcancel"></span>输出对象长度限制在64个字节之内
+								</small>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3 control-label">
+							<span class="text-impo">*</span>输出路径：
+						</div>
+						<div class="col-sm-8">
+							<input type="text" tabindex="0" data-toggle="popover" data-content="OSS转码文件输出地址，请按以下格式输入http://bucket.oss-cn-hangzhou.aliyuncs.com/path/" class="form-control" id="newmct-url02">
+							<div class="help-block">
+								<small class="text-impo hide" id="output_url01">
+									<span class="icon iconfont icon-androidcancel"></span>url不能为空
+								</small>
+								<small class="text-impo hide" id="output_url02">
+									<span class="icon iconfont icon-androidcancel"></span>url格式不正确
+								</small>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!--转码基础设定结束-->
+			<div class="Newmct_step02 hide">
+				<div role="tabpanel" class="tab information_tab" style="margin-bottom: 40px;">
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active">
+							<a href="#Section1" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true">预置静态模版</a>
+						</li>
+						<li role="presentation" class="">
+							<a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false">自定义模版</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane fade active in" id="Section1">
+							<div class="posit radio" style="margin-left: 1em;">
+								<label><input type="radio" checked="" value="全部" name="systemformat">全部</label>
+								<label><input type="radio" value="mp4" name="systemformat">mp4</label>
+								<label><input type="radio" value="m3u8" name="systemformat">m3u8</label>
+								<label><input type="radio" value="flv" name="systemformat">flv</label>
+								<label><input type="radio" value="mp3" name="systemformat">mp3</label>
+							</div>
+							<div class="table-responsive newmct-table">
+								<table class="table table-hover MCT-table">
+									<thead>
+										<tr>
+											<th width="10"><input type="checkbox" id="sys-selall"></th>
+											<th class="col-sm-3">输出格式</th>
+											<th class="col-sm-3">模板名</th>
+											<th class="col-sm-3 text-center">码率(kpbs)</th>
+											<th class="col-sm-3 text-center">分辨率/宽度</th>
+										</tr>
+									</thead>
+									<tbody id="sys-body">
+										<tr>
+											<td width="10"><input type="checkbox" value="转封装-FLV" class="check_sys"></td>
+											<td class="col-sm-3">flv</td>
+											<td class="col-sm-3">转封装-FLV</td>
+											<td class="col-sm-3 text-center">-</td>
+											<td class="col-sm-3 text-center">-</td>
+										</tr>
+										<tr>
+											<td width="10"><input type="checkbox" value="Web端(FLV)-FHD" class="check_sys"></td>
+											<td class="col-sm-3">flv</td>
+											<td class="col-sm-3">Web端(FLV)-FHD</td>
+											<td class="col-sm-3 text-center">≤3800</td>
+											<td class="col-sm-3 text-center">1920</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!--预置静态模版结束-->
+						<div role="tabpanel" class="tab-pane fade" id="Section2">
+							<div class="posit radio" style="margin-left: 1em;">
+								<label><input type="radio" checked="" value="全部" name="customformat">全部</label>
+								<label><input type="radio" value="mp4" name="customformat">mp4</label>
+								<label><input type="radio" value="m3u8" name="customformat">m3u8</label>
+								<label><input type="radio" value="flv" name="customformat">flv</label>
+								<label><input type="radio" value="mp3" name="customformat">mp3</label>
+							</div>
+							<div class="table-responsive newmct-table">
+								<table class="table table-hover MCT-table">
+									<thead>
+										<tr>
+											<th width="10"><input type="checkbox" id="cust-selall"></th>
+											<th class="col-sm-3">输出格式</th>
+											<th class="col-sm-3">模板名</th>
+											<th class="col-sm-3 text-center">码率(kpbs)</th>
+											<th class="col-sm-3 text-center">分辨率/宽度</th>
+										</tr>
+									</thead>
+									<tbody id="cust-body">
+										<tr>
+											<td width="10"><input type="checkbox" value="bgvdfhjj" class="check_cust"></td>
+											<td class="col-sm-3">mp4</td>
+											<td class="col-sm-3">bgvdfhjj</td>
+											<td class="col-sm-3 text-center">-</td>
+											<td class="col-sm-3 text-center">-</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!--自定义模版结束-->
+					</div>
+				</div>
+				<hr />
+				<!--information_tab end-->
+				<div class="newmct-watermark">
+					<label style="font-weight: 700;">使用水印&nbsp;<input type="checkbox" id="enable"></label>
+					<div class="newmct-watermark-temp hide">
+						<label>选择水印模版</label>
+						<select class="form-control" id="newmct-watermark-template">
+							<option>nsbdfkvfgbfgfgfgvf</option>
+						</select>
+						<label>水印图片地址</label>
+						<input type="text" class="form-control" id="newmct-watermark-url">
+						<div class="help-block">
+							<small class="text-impo hide" id="newmct-watermark-url-err01">
+									<span class="icon iconfont icon-androidcancel"></span>url地址不能为空
+								</small>
+							<small class="text-impo hide" id="newmct-watermark-url-err02">
+									<span class="icon iconfont icon-androidcancel"></span>url格式不正确
+								</small>
+						</div>
+					</div>
+				</div>
+				<!--使用水印结束-->
+			</div>
+			<!--转码模版选择结束-->
+		</script>
+		<script type="text/html" id="newmct-btn">
+			<div class="newmctbtns01">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" disabled class="btn btn-primary" id="mct-nxetstep">下一步</button>
+			</div>
+			<div class="newmctbtns02 hide">
+				<small class="text-impo hide btnerr">
+					<span class="icon iconfont icon-androidcancel"></span>一次只能选择1路转码
+				</small>
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-default" id="mct-backstep">上一步</button>
+				<button type="button" disabled class="btn btn-primary" id="mct-transcode">转码</button>
+			</div>
+		</script>
+		<!--转码基础设定结束-->
+		<script type="text/html" id="transcoding_task">
+			{{if flag}}{{each listArray as value}}
+			<tr>
+				<td class="col-sm-2">
+					<p>{{value.name}}</p>
+					<p>ID:
+						<a href="MCT-info.html">{{value.id}}</a>
+					</p>
+				</td>
+				<td class="col-sm-1">{{value.template}}</td>
+				{{if value.state=="转码失败"}}
+				<td class="col-sm-1 text-impo">{{value.state}}</td>{{/if}} {{if value.state=="转码成功"}}
+				<td class="col-sm-1 text-success">{{value.state}}</td>{{/if}}
+				<td class="col-sm-1 text-center">{{value.time}}</td>
+				<td class="col-sm-2">
+					<span class="transcoding_span" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="{{value.url}}">{{value.url}}</span>
+				</td>
+			</tr>
+			{{/each}} {{/if}}
+		</script>
+
+		<script type="text/javascript" src="script/style.js"></script>
+		<script type="text/javascript" src="script/mct.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+				//calendar
+				$(".timecho").each(function() {
+					laydate.render({
+						elem: this,
+						trigger: 'click'
+					});
+				});
+				//伸缩menu
+				jQuery("#jquery-accordion-menu").jqueryAccordionMenu();
+				$("#demo-list li").click(function() {
+					if($(this).hasClass("active")) {
+						$(this).removeClass("active");
+					} else {
+						$(this).addClass("active");
+					}
+				})
+				$("#demo-list li.firstli").trigger("click");
+				$('[data-toggle="tooltip"]').tooltip();
+			});
+		</script>
+	</body>
+
+</html>

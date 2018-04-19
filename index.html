@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>方讯视频管理控制台首页</title>
+		<script src="script/jquery-1.11.1.min.js" type="text/javascript"></script>
+		<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" title="" rel="stylesheet" />
+		<link title="" href="font/iconfont.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/style.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/user.css" rel="stylesheet" type="text/css" />
+		<script src="bootstrap-3.3.5-dist/js/bootstrap.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<nav class="nav navbar-mystyle navbar-fixed-top">
+			<div class="navbar-header-dsc pull-left">
+				<a href="#"><img src="img/logox.png"></a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="li-border">
+						<a class="mystyle-color" href="index.html">管理控制台</a>
+					</li>
+					<li class="dropdown pro_ser li-border">
+						<a href="#" class="dropdown-toggle mystyle-color" data-toggle="dropdown">
+							<span>产品与服务</span>
+							<span class="icon-arrow-down icon iconfont icon-sortdesc"></span>
+						</a>
+						<ul class="dropdown-menu dropdown_">
+							<li>
+								<a href="service-live.html">视频直播</a>
+							</li>
+							<li>
+								<a href="service-vod.html">视频点播</a>
+							</li>
+							<li>
+								<a href="video_material.html">视频编辑</a>
+							</li>
+							<li>
+								<a href="service-meeting.html">视频会议</a>
+							</li>
+							<li>
+								<a href="service-mct.html">媒体转码</a>
+							</li>
+							<li>
+								<a href="service-image.html">图片处理</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav pull-right">
+					<li class="li-border user-nam">
+						<a href="#" class="dropdown-toggle mystyle-color">
+							00000000@qq.com
+						</a>
+						<div class="user_cen">
+							<div class="user_cen_list fix">
+								<a href="modfiy_infor.html"><span class="icon iconfont icon-weibiaoti3"></span><span>基本资料</span></a>
+								<a href="modfiy_pass.html"><span class="icon iconfont icon-xiugaimima"></span><span>修改密码</span></a>
+								<a href="modfiy_touxiang.html"><span class="icon iconfont icon-xiugaitouxiang"></span><span>修改头像</span></a>
+								<a href="user_care.html"><span class="icon iconfont icon-uniE6"></span><span>我的关注</span></a>
+							</div>
+							<div class="user_logout_btn">
+								<a href="http://clouds.fanson.cc/?=login.html">退出登录</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!--nav end-->
+		<div class="down-main">
+			<div class="left-main left-full">
+				<div class="sidebar-fold">
+					<span class="icon iconfont icon-iconfont03"></span>
+				</div>
+				<div class="subNavBox">
+					<ul>
+						<li>
+							<a href="live_nullData.html">
+								<span class="sublist-icon iconfont icon-shipinzhibo"></span>
+								<span class="sub-title">视频直播</span>
+								<div class="Ttitle"><span>视频直播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-vod.html"><span class="sublist-icon iconfont icon-yinshipindianboVOD"></span><span class="sub-title">视频点播</span>
+								<div class="Ttitle"><span>视频点播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="video_material.html"><span class="sublist-icon"><img src="img/videoedit.png" /></span><span class="sub-title">视频编辑</span>
+								<div class="Ttitle"><span>视频编辑</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-meeting.html">
+								<span class="sublist-icon iconfont icon-shipinhuiyi"></span><span class="sub-title">视频互动</span>
+								<div class="Ttitle"><span>视频会议</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-mct.html"><span class="sublist-icon iconfont icon-yinshipinzhuanmaMCT"></span><span class="sub-title">媒体转码</span>
+								<div class="Ttitle"><span>媒体转码</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-image.html"><span class="sublist-icon iconfont icon-img"></span><span class="sub-title">图片处理</span>
+								<div class="Ttitle"><span>图片处理</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="course.html"><span class="sublist-icon iconfont icon-gongcheng" style="font-size: 18px;"></span><span class="sub-title">帮助文档</span>
+								<div class="Ttitle"><span>帮助文档</span></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--left-main end-->
+			<div class="right-service right-product right-full">
+				<div class="right-service-rt index_rt">
+					<div class="index_main">
+						<div class="index_con box-shadow">
+							<div class="user_infor">
+								<div class="console-title border-bottom">
+									<h2>用户中心</h2>
+								</div>
+								<div class="user_infor_base fix">
+									<div class="toux pull-left">
+										<img src="img/touxiang.png">
+										<a href="modfiy_toux.html">［修改头像］</a>
+									</div>
+									<div class="infor_base pull-left margin-b2">
+										<div class="infor_base1 pull-left">
+											<ul>
+												<li>
+													<label>用户名：</label><span>00000000@qq.com<a href="modfiy_infor.html"><img src="img/edit.png"></a></span>
+												</li>
+												<li>
+													<label>邮箱：</label><span>00000000@qq.com</span>
+												</li>
+												<li>
+													<label>注册时间：</label><span>2017-07-12 12:00</span>
+												</li>
+											</ul>
+										</div>
+										<div class="infor_base2 pull-left">
+											<ul>
+												<li>
+													<label>用户ID：</label><span>87507F61AF96530B</span>
+												</li>
+												<li>
+													<label>用户状态：</label><span>正常</span>
+												</li>
+												<li>
+													<label>最近登陆时间：</label><span>2017-07-12 12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!--user_infor_base  end-->
+								<div class="account">
+									<p class="line30">您当前的账号安全度<span></span><b>高</b></p>
+								</div>
+								<div class="pass">
+									<div class="pull-right"><span class="glyphicon glyphicon-ok-circle"></span>
+										<a class="default">已设置</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+										<a href="modfiy_pass.html">修改</a>
+									</div>
+									<p class="line30"><span>登录密码：</span>安全性高的密码可以使账号更安全，建议您定期更换密码，设置一个包含字母，符号或数字中至少两项且长度超过6位的密码。</p>
+								</div>
+								<div class="pass" style="margin-bottom: 10px;">
+									<p class="line30"><span>邮箱绑定：</span>绑定邮箱可以用于安全验证、找回密码等重要操作</p>
+								</div>
+							</div>
+							<!--user_infor end-->
+							<div class="user_care">
+								<div class="console-title border-bottom clearfix margin-b2">
+									<a href="user_care.html" class="pull-right" style="line-height: 37px;">查看更多</a>
+									<h2 class="">用户关注</h2>
+								</div>
+								<div class="care_list fix">
+									<ul>
+										<li>
+											<a href="#">
+												<span class="care_img"><img src="img/care.jpg"></span>
+												<div class="care_tit">
+													<h2>哲学思考哲学思考</h2>
+													<h3>讲师：增辉</h3>
+													<h4><span class="iconfont icon-uniE17"></span>评论：3<span class="iconfont icon-shouting"></span>浏览2202</h4>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="care_img"><img src="img/care.jpg"></span>
+												<div class="care_tit">
+													<h2>哲学思考哲学思考</h2>
+													<h3>讲师：增辉</h3>
+													<h4><span class="iconfont icon-uniE17"></span>评论：3<span class="iconfont icon-shouting"></span>浏览2202</h4>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="care_img"><img src="img/care.jpg"></span>
+												<div class="care_tit">
+													<h2>哲学思考哲学思考</h2>
+													<h3>讲师：增辉</h3>
+													<h4><span class="iconfont icon-uniE17"></span>评论：3<span class="iconfont icon-shouting"></span>浏览2202</h4>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="care_img"><img src="img/care.jpg"></span>
+												<div class="care_tit">
+													<h2>哲学思考哲学思考</h2>
+													<h3>讲师：增辉</h3>
+													<h4><span class="iconfont icon-uniE17"></span>评论：3<span class="iconfont icon-shouting"></span>浏览2202</h4>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="care_img"><img src="img/care.jpg"></span>
+												<div class="care_tit">
+													<h2>哲学思考哲学思考</h2>
+													<h3>讲师：增辉</h3>
+													<h4><span class="iconfont icon-uniE17"></span>评论：3<span class="iconfont icon-shouting"></span>浏览2202</h4>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!--user_care end-->
+						</div>
+					</div>
+					<!--index_main  end-->
+				</div>
+				<!--right-service-rt end-->
+			</div>
+			<!--right-product end-->
+		</div>
+		<!--down-main end-->
+		<script type="text/javascript" src="script/style.js"></script>
+
+	</body>
+
+</html>

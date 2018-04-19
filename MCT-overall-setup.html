@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>媒体转码--全局设置</title>
+		<script src="script/jquery-1.11.1.min.js" type="text/javascript"></script>
+		<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" title="" rel="stylesheet" />
+		<link title="" href="font/iconfont.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/style.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/services.css" rel="stylesheet" type="text/css" />
+		<script src="bootstrap-3.3.5-dist/js/bootstrap.js" type="text/javascript"></script>
+		<script type="text/javascript" src="script/jquery-accordion-menu.js"></script>
+		<script type="text/javascript" src="script/template.js"></script>
+		<script type="text/javascript" src="layui/layui.js"></script>
+	</head>
+
+	<body>
+		<nav class="nav navbar-mystyle navbar-fixed-top">
+			<div class="navbar-header-dsc pull-left">
+				<a href="#"><img src="img/logox.png"></a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="li-border">
+						<a class="mystyle-color" href="index.html">管理控制台</a>
+					</li>
+					<li class="dropdown pro_ser li-border">
+						<a href="#" class="dropdown-toggle mystyle-color" data-toggle="dropdown">
+							<span>产品与服务</span>
+							<span class="icon-arrow-down icon iconfont icon-sortdesc"></span>
+						</a>
+						<ul class="dropdown-menu dropdown_">
+							<li>
+								<a href="service-live.html">视频直播</a>
+							</li>
+							<li>
+								<a href="service-vod.html">视频点播</a>
+							</li>
+							<li>
+								<a href="video_material.html">视频编辑</a>
+							</li>
+							<li>
+								<a href="service-meeting.html">视频会议</a>
+							</li>
+							<li>
+								<a href="service-mct.html">媒体转码</a>
+							</li>
+							<li>
+								<a href="service-image.html">图片处理</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav pull-right">
+					<li class="li-border user-nam">
+						<a href="#" class="dropdown-toggle mystyle-color">
+							00000000@qq.com
+						</a>
+						<div class="user_cen">
+							<div class="user_cen_list fix">
+								<a href="modfiy_infor.html"><span class="icon iconfont icon-weibiaoti3"></span><span>基本资料</span></a>
+								<a href="modfiy_pass.html"><span class="icon iconfont icon-xiugaimima"></span><span>修改密码</span></a>
+								<a href="modfiy_touxiang.html"><span class="icon iconfont icon-xiugaitouxiang"></span><span>修改头像</span></a>
+								<a href="user_care.html"><span class="icon iconfont icon-uniE6"></span><span>我的关注</span></a>
+							</div>
+							<div class="user_logout_btn">
+								<a href="http://clouds.fanson.cc/?=login.html">退出登录</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!--nav end-->
+		<div class="down-main">
+			<div class="left-main left-off">
+				<div class="sidebar-fold">
+					<span class="icon iconfont icon-menu"></span>
+				</div>
+				<div class="subNavBox">
+					<ul>
+						<li>
+							<a href="service-live.html">
+								<span class="sublist-icon iconfont icon-shipinzhibo"></span>
+								<span class="sub-title">视频直播</span>
+								<div class="Ttitle"><span>视频直播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-vod.html"><span class="sublist-icon iconfont icon-yinshipindianboVOD"></span><span class="sub-title">视频点播</span>
+								<div class="Ttitle"><span>视频点播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="video_material.html"><span class="sublist-icon"><img src="img/videoedit.png" /></span><span class="sub-title">视频编辑</span>
+								<div class="Ttitle"><span>视频编辑</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-meeting.html">
+								<span class="sublist-icon iconfont icon-shipinhuiyi"></span><span class="sub-title">视频互动</span>
+								<div class="Ttitle"><span>视频会议</span></div>
+							</a>
+						</li>
+						<li class="active">
+							<a href="service-mct.html"><span class="sublist-icon iconfont icon-yinshipinzhuanmaMCT"></span><span class="sub-title">媒体转码</span>
+								<div class="Ttitle"><span>媒体转码</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-image.html"><span class="sublist-icon iconfont icon-img"></span><span class="sub-title">图片处理</span>
+								<div class="Ttitle"><span>图片处理</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="course.html"><span class="sublist-icon iconfont icon-gongcheng" style="font-size: 18px;"></span><span class="sub-title">帮助文档</span>
+								<div class="Ttitle"><span>帮助文档</span></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--left-main end-->
+			<div class="right-service right-product right-off">
+				<div class="right-service-lf">
+					<div class="prodtitle prodnavtit">MTS控制台</div>
+					<div id="jquery-accordion-menu" class="jquery-accordion-menu">
+						<ul id="demo-list">
+							<li>
+								<a class="classa" href="service-mct.html">文件转码管理</a>
+							</li>
+							<li class="firstli">
+								<a class="classa" href="javascript:">媒体管理</a>
+								<ul class="submenu">
+									<li>
+										<a class="classb" href="MCT-library.html"><span></span>媒体库</a>
+									</li>
+									<li>
+										<a class="classb" href="MCT-setup.html"><span></span>媒体库设置</a>
+									</li>
+								</ul>
+							</li>
+							<li class="on">
+								<a class="classa" href="MCT-overall-setup.html">全局设置</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--right-service-lf end-->
+				<div class="dislpayArrow" onClick="displaynavbar(this)">
+					<div class="dislpayArrow_inner">
+						<div class="dislpayArrow_bg"></div>
+						<div class="dislpayArrow_coll">
+							<span class="icon iconfont icon-zhankai icon-collapse-left"></span>
+							<span class="icon iconfont icon-unfold icon-collapse-right"></span></div>
+					</div>
+				</div>
+				<!--dislpayArrow end-->
+				<div class="right-service-rt">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="console-title border-bottom">
+								<h2>全局设置</h2>
+							</div>
+							<div role="tabpanel" class="tab information_tab">
+								<ul class="nav nav-tabs" role="tablist" style="margin: 20px 0;">
+									<li role="presentation" class="active">
+										<a href="#Section1" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true">转码模版</a>
+									</li>
+									<li role="presentation" class="">
+										<a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false">水印模版</a>
+									</li>
+								</ul>
+								<div class="tab-content">
+									<div role="tabpanel" class="tab-pane fade active in" id="Section1">
+										<div>
+											<button type="button" class="btn btn-primary" id="Mtranscod" data-toggle="modal" data-target="#myModal">新建转码模版</button>
+										</div>
+										<div class="table-responsive transcoding_listbox">
+											<table class="table table-hover MCT-table">
+												<thead>
+													<tr>
+														<th>转码模板ID</th>
+														<th>转码模板名称</th>
+														<th>输出格式</th>
+														<th>视频参数</th>
+														<th>音频参数</th>
+														<th>条件转码</th>
+														<th>封包参数</th>
+														<th class="text-right">操作</th>
+													</tr>
+												</thead>
+												<tbody id="MCTtranscoding">
+													<tr>
+														<td>a94cefd5f482cd040b0233ba04585caf</td>
+														<td class="mcttrastempname">mm</td>
+														<td>mp4</td>
+														<td>
+															<ul data-toggle="popover">
+																<li>编码格式：H.264</li>
+																<li>编码级别：high</li>
+																<li>帧率： fps</li>
+																<li>高度： px</li>
+																<li>宽度： px</li>
+																<li>码率： Kbps</li>
+															</ul>
+														</td>
+														<td>
+															<ul>
+																<li>编码格式：MP3</li>
+																<li>采样率：22050 Hz</li>
+																<li>码率： Kbps</li>
+																<li>声道数：1</li>
+															</ul>
+														</td>
+														<td>
+															<ul>
+																<li>转码模式：onepass</li>
+															</ul>
+														</td>
+														<td>
+															<ul>
+																<li>分片时长： s</li>
+															</ul>
+														</td>
+														<td class="text-right">
+															<a href="javascript:" class="Mtrastempedit" data-toggle="modal" data-target="#myModal">编辑</a><span class="text-explode">|</span>
+															<a href="javascript:" class="Mtrastempdel" data-toggle="modal" data-target="#myModal">删除</a>
+														</td>
+													</tr>
+													<tr>
+														<td>7fd26022b1132c4428fb49a6ea74c37b</td>
+														<td class="mcttrastempname">djhfvd</td>
+														<td>mp4</td>
+														<td>
+															<ul data-toggle="popover">
+																<li>编码格式：H.264</li>
+																<li>编码级别：high</li>
+																<li>帧率：45 fps</li>
+																<li>高度：800 px</li>
+																<li>宽度：600 px</li>
+																<li>码率：12 Kbps</li>
+															</ul>
+														</td>
+														<td>
+															<ul>
+																<li>编码格式：AAC</li>
+																<li>采样率：44100 Hz</li>
+																<li>码率：128 Kbps</li>
+																<li>声道数：2</li>
+															</ul>
+														</td>
+														<td>
+															<ul>
+																<li>转码模式：onepass</li>
+																<li>检查视频分辨率, 不转码</li>
+															</ul>
+														</td>
+														<td>
+															<ul>
+																<li>分片时长： s</li>
+															</ul>
+														</td>
+														<td class="text-right">
+															<a href="javascript:" class="Mtrastempedit" data-toggle="modal" data-target="#myModal">编辑</a><span class="text-explode">|</span>
+															<a href="javascript:" class="Mtrastempdel" data-toggle="modal" data-target="#myModal">删除</a>
+														</td>
+													</tr>
+												</tbody>
+												<tfoot>
+													<td colspan="8">
+														<div class="pull-right">
+															<div class="pagination-info inline-block">
+																<span class="pageNum">共有1条</span>
+																<span class="pageNumset">每页显示：10条</span>
+															</div>
+															<ul class="pagination" style="margin: 0;vertical-align: middle;">
+																<li class="disabled">
+																	<a href="#">«</a>
+																</li>
+																<li class="disabled">
+																	<a href="#">‹</a>
+																</li>
+																<li class="active">
+																	<a href="#">1 <span class="sr-only">(current)</span></a>
+																</li>
+																<li class="disabled">
+																	<a href="#">›</a>
+																</li>
+																<li class="disabled">
+																	<a href="#">»</a>
+																</li>
+															</ul>
+														</div>
+													</td>
+												</tfoot>
+											</table>
+										</div>
+										<!--table-responsive end-->
+									</div>
+									<!--Section1 end-->
+									<div role="tabpanel" class="tab-pane fade" id="Section2">
+										<div>
+											<button type="button" class="btn btn-primary" id="buMwater" data-toggle="modal" data-target="#myModal">新建水印模版</button>
+										</div>
+										<div class="table-responsive transcoding_listbox">
+											<table class="table table-hover MCT-table">
+												<thead>
+													<tr>
+														<th class="col-sm-2">水印模板ID</th>
+														<th class="col-sm-2">水印模板名称</th>
+														<th class="col-sm-2">水印尺寸</th>
+														<th class="col-sm-2">水印位置</th>
+														<th class="col-sm-2 text-right">操作</th>
+													</tr>
+												</thead>
+												<tbody id="Mwaterbod">
+													<tr>
+														<td>a3d4dcb3409649dc9f23754c0ded5692</td>
+														<td><span class="mctwarname">djhvmhgvkfjbvk</span></td>
+														<td>
+															<ul>
+																<li>宽度：<span class="mctwarw"></span> px</li>
+																<li>高度：<span class="mctwarh"></span> px</li>
+															</ul>
+														</td>
+														<td>
+															<ul>
+																<li class="mctwarpos">位置：左下</li>
+																<li>水平位置：<span class="mctwarlev"></span> px</li>
+																<li>垂直位置：<span class="mctwarvert"></span> px</li>
+															</ul>
+														</td>
+														<td class="text-right">
+															<a href="javascript:" class="Mwateredit" data-toggle="modal" data-target="#myModal">编辑</a><span class="text-explode">|</span>
+															<a href="javascript:" class="Mwaterdel" data-toggle="modal" data-target="#myModal">删除</a>
+														</td>
+													</tr>
+												</tbody>
+												<tfoot>
+													<td colspan="5">
+														<div class="pull-right">
+															<div class="pagination-info inline-block">
+																<span class="pageNum">共有1条</span>
+																<span class="pageNumset">每页显示：10条</span>
+															</div>
+															<ul class="pagination" style="margin: 0;vertical-align: middle;">
+																<li class="disabled">
+																	<a href="#">«</a>
+																</li>
+																<li class="disabled">
+																	<a href="#">‹</a>
+																</li>
+																<li class="active">
+																	<a href="#">1 <span class="sr-only">(current)</span></a>
+																</li>
+																<li class="disabled">
+																	<a href="#">›</a>
+																</li>
+																<li class="disabled">
+																	<a href="#">»</a>
+																</li>
+															</ul>
+														</div>
+													</td>
+												</tfoot>
+											</table>
+										</div>
+										<!--table-responsive end-->
+									</div>
+									<!--Section2 end-->
+								</div>
+							</div>
+							<!--information_tab end-->
+						</div>
+					</div>
+				</div>
+				<!--right-service-rt end-->
+			</div>
+			<!--right-product end-->
+		</div>
+		<!--down-main end-->
+		<!--modal start-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-backdrop="false" data-keyboard="false">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">  
+                    <span aria-hidden="true">×</span>  
+                </button>
+						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					</div>
+					<div class="modal-body"></div>
+					<div class="modal-footer"></div>
+				</div>
+			</div>
+		</div>
+		<!--modal end-->
+		<div class="growl"></div>
+		<!--end-->
+		<script type="text/html" id="popovercon">
+			<p>编码格式：{{format}}</p>
+			<p>编码级别：{{level}}</p>
+			<p>帧率：{{framerate}}</p>
+			<p>高度：{{height}}</p>
+			<p>宽度：{{width}}</p>
+			<p>码率：{{rate}}</p>
+			<p>关键帧最大间隔：{{jiange}}</p>
+			<p>视频算法器预置：{{yuzhi}}</p>
+			<p>缓冲区大小： {{daxiao}}</p>
+			<p>扫描模式：{{mosi}}</p>
+			<p>视频码率峰值： {{fengzi}}</p>
+			<p>质量控制因子：{{yinzi}}</p>
+		</script>
+		<!--popovercon end-->
+		<script type="text/html" id="modal_footer">
+			<div class="modal_footer01">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" disabled class="btn btn-primary">下一步</button>
+			</div>
+			<div class="modal_footer02 hide">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-default backstep">上一步</button>
+				<button type="button" class="btn btn-primary">下一步</button>
+			</div>
+			<div class="modal_footer03 hide">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-default backstep">上一步</button>
+				<button type="button" class="btn btn-primary">下一步</button>
+			</div>
+			<div class="modal_footer04 hide">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-default backstep">上一步</button>
+				<button type="button" class="btn btn-primary">下一步</button>
+			</div>
+			<div class="modal_footer05 hide">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-default backstep">上一步</button>
+				<button type="button" class="btn btn-primary">确定</button>
+			</div>
+		</script>
+		<!-- end-->
+		<script type="text/html" id="modal_footer01">
+			<button type="button" disabled class="btn btn-primary">确定</button>
+			<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+		</script>
+		<script type="text/html" id="bulitMtranscode">
+			<form class="form-horizontal">
+				<div class="mcttranstep row">
+					<div class="step step-first col-xs-2 step-active">选择输出格式</div>
+					<div class="step col-xs-2">配置视频参数</div>
+					<div class="step col-xs-2">配置音频参数</div>
+					<div class="step col-xs-2">配置条件转码</div>
+					<div class="step col-xs-2 step-end">配置封包参数</div>
+				</div>
+				<!--mcttranstep end-->
+				<div class="mcttranpage" id="mcttranpage">
+					<div class="row mcttranpage01">
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><span class="text-impo">*</span>转码模版名称</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" data-toggle="popover" id="mctnam">
+								<div class="help-block">
+									<small class="text-impo hide" id="mctnamerr01"><span class="iconfont icon-androidcancel"></span>转码模板名称不能为空</small>
+									<small class="text-impo hide" id="mctnamerr02"><span class="iconfont icon-androidcancel"></span>转码模板名称格式不正确</small>
+									<small class="text-impo hide" id="mctnamerr03"><span class="iconfont icon-androidcancel"></span>转码模板名称长度限制在128个字节之内</small>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">文件格式</label>
+							<div class="col-sm-8">
+								<select class="form-control" id="trasde_format">
+									<option value="0"></option>
+									<option value="1">ts</option>
+									<option value="2" selected="selected">mp4</option>
+									<option value="3">flv</option>
+									<option value="4">m3u8</option>
+									<option value="5">mp3</option>
+									<option value="6">ogg</option>
+									<option value="7">flac</option>
+									<option value="8">gif</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row mcttranpage02 hide">
+						<label class="control-label" style="margin-left: 45px;">
+							禁用视频&nbsp;&nbsp;<input type="checkbox" id="forbidVideo"/>
+						</label>
+						<fieldset>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">编码格式：</label>
+								<div class="col-sm-8">
+									<select class="form-control">
+										<option value="0" selected>H.264</option>
+										<option value="1">H.265</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">编码级别：</label>
+								<div class="col-sm-8">
+									<select class="form-control">
+										<option value="0" selected>high 适合高分辨率设备</option>
+										<option value="1">main 适合标准分辨率设备</option>
+										<option value="2">baseline 适合移动设备</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">码率(Kbps)：</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="videobitrate" data-toggle="popover" />
+									<div class="help-block">
+										<small class="text-impo hide" id="videobitraterror"><span class="iconfont icon-androidcancel"></span>码率大小限制在［10,50000]</small>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">质量控制因子：</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="transcrf" data-toggle="popover" />
+									<div class="help-block">
+										<small class="text-impo hide" id="transcrferror"><span class="iconfont icon-androidcancel"></span>码率质量控制因子大小限制在[0,51]</small>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">视频宽度(px)：</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="transtmpwidth" data-toggle="popover" />
+									<div class="help-block">
+										<small class="text-impo hide" id="transtmpwidtherror"><span class="iconfont icon-androidcancel"></span>视频原始宽度限制在[128,4096]</small>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">视频高度(px)：</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="transtmpheight" data-toggle="popover" />
+									<div class="help-block">
+										<small class="text-impo hide" id="transtmpheighterro"><span class="iconfont icon-androidcancel"></span>视频原始高度限制在[128,4096]</small>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">帧率(fps)：</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="transtmpfps" data-toggle="popover" />
+									<div class="help-block">
+										<small class="text-impo hide" id="transtmpfpserr"><span class="iconfont icon-androidcancel"></span>帧率大小限制在(0,60]</small>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">关键帧间最大帧数：</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="transtmpgop" data-toggle="popover" />
+									<div class="help-block">
+										<small class="text-impo hide" id="transtmpgoperr"><span class="iconfont icon-androidcancel"></span>关键帧间最大帧数限制在[1,100000]</small>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">视频算法器预置：</label>
+								<div class="col-sm-8">
+									<select class="form-control" id="transtmppreset">
+										<option value="0" selected="selected"></option>
+										<option value="1">veryfast</option>
+										<option value="2">fast</option>
+										<option value="3">medium</option>
+										<option value="4">slow</option>
+										<option value="5">slower</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">扫描模式：</label>
+								<div class="col-sm-8">
+									<select class="form-control" id="videoscanMode">
+										<option value="0" selected="selected"></option>
+										<option value="1">interlaced</option>
+										<option value="2">progressive</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">缓冲区大小(Kb)：</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="videobufsize" data-toggle="popover" />
+									<div class="help-block">
+										<small class="text-impo hide" id="videobufsizeerr"><span class="iconfont icon-androidcancel"></span>缓冲区大小限制在[1000,128000]</small>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">码率峰值(Kbps)：</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="videomaxrate" data-toggle="popover" />
+									<div class="help-block">
+										<small class="text-impo hide" id="videomaxrateerr"><span class="iconfont icon-androidcancel"></span>视频码率峰值限制在[10,50000]</small>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<div class="mcttranpage03 hide">
+						<label class="control-label" style="margin-left: 45px;">
+							禁用音频&nbsp;&nbsp;<input type="checkbox" id="forbidAudio" />
+						</label>
+						<fieldset>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">编码格式：</label>
+								<div class="col-sm-8">
+									<select class="form-control" id="audiocodec">
+										<option value="0"></option>
+										<option value="1" selected="selected">AAC</option>
+										<option value="2">MP3</option>
+										<option value="3">VORBIS</option>
+										<option value="4">FLAC</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">采样率：</label>
+								<div class="col-sm-8">
+									<select class="form-control" id="audiosamplerate">
+										<option value="0"></option>
+										<option value="1">22050</option>
+										<option value="2">32000</option>
+										<option value="3" selected="selected">44100</option>
+										<option value="4">48000</option>
+										<option value="5">96000</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">输出码率：</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="audiobitrate" data-toggle="popover" placeholder="12" />
+									<div class="help-block">
+										<small class="text-impo hide" id="audiobitrateerr"><span class="iconfont icon-androidcancel"></span>音频码率限制在[8,1000]</small>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">声道数：</label>
+								<div class="col-sm-8">
+									<select class="form-control" id="audiochannels">
+										<option value="0"></option>
+										<option value="1">1</option>
+										<option value="2" selected="selected">2</option>
+										<option value="3">4</option>
+										<option value="4">5</option>
+										<option value="5">6</option>
+										<option value="6">8</option>
+									</select>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<div class="mcttranpage04 hide">
+						<div class="form-group">
+							<label class="col-sm-3 control-label">转码模式：</label>
+							<div class="col-sm-8">
+								<select class="form-control" id="transConfigtransMode">
+									<option value="0"></option>
+									<option value="1" selected="selected">onepass</option>
+									<option value="2">twopass</option>
+									<option value="3">CBR</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">检查视频分辨率:</label>
+							<div class="col-sm-8">
+								<input type="checkbox" id="showResoConfig" style="margin-top: 10px;" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">检查视频码率:</label>
+							<div class="col-sm-8">
+								<input type="checkbox" id="showVideoBitrateConfig" style="margin-top: 10px;" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">检查音频码率:</label>
+							<div class="col-sm-8">
+								<input type="checkbox" id="showAudioBitrateConfig" style="margin-top: 10px;" />
+							</div>
+						</div>
+					</div>
+					<div class="mcttranpage05 hide">
+						<div class="form-group">
+							<label class="col-sm-3 control-label">分片时长(s)：</label>
+							<div class="col-sm-8">
+								<input type="text" disabled class="form-control" id="segmentDuration" data-toggle="popover" />
+								<div class="help-block">
+									<small class="text-impo hide" id="segmentDurationerr"><span class="iconfont icon-androidcancel"></span>分片时长限制在[1,60]</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--mcttranpage end-->
+			</form>
+		</script>
+		<!--新建转码模版 end-->
+		<script type="text/html" id="bulitMwater">
+			<form class="form-horizontal" id="Mwaterform">
+				<div class="form-group">
+					<label class="col-sm-3 control-label"><span class="text-impo">*</span>水印模板名称：</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="Mwatername" data-toggle="popover">
+						<div class="help-block">
+							<small class="text-impo hide" id="Mnamerr01">
+									<span class="icon iconfont icon-androidcancel"></span>水印模板名称不能为空
+								</small>
+							<small class="text-impo hide" id="Mnamerr02">
+									<span class="icon iconfont icon-androidcancel"></span>水印模板名称格式不正确
+								</small>
+							<small class="text-impo hide" id="Mnamerr03">
+									<span class="icon iconfont icon-androidcancel"></span>水印模板名称长度限制在128个字节之内
+								</small>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">水印宽度：</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" data-toggle="popover" id="Mwaterwidth">
+						<div class="help-block">
+							<small class="text-impo hide" id="Mwaterwierr">
+									<span class="icon iconfont icon-androidcancel"></span>水印模板宽度限制在[8,4096]或者(0,1)
+							</small>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">水印高度：</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" data-toggle="popover" id="Mwaterheight">
+						<div class="help-block">
+							<small class="text-impo hide" id="Mwaterhigerr">
+									<span class="icon iconfont icon-androidcancel"></span>水印模板高度限制在[8,4096]或者(0,1)
+							</small>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label"><span class="text-impo"></span>水印位置：</label>
+					<div class="col-sm-8">
+						<select class="form-control" id="Mwaterposition">
+							<option value="0">左上</option>
+							<option value="1" selected="selected">右上</option>
+							<option value="2">左下</option>
+							<option value="3">右下</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">水平偏移量：</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" data-toggle="popover" id="Mwaterlevel">
+						<div class="help-block">
+							<small class="text-impo hide" id="Mwaterleverr">
+									<span class="icon iconfont icon-androidcancel"></span>水平偏移量大小限制在[0,4096]或者(0,1)
+							</small>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">垂直偏移量：</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" data-toggle="popover" id="Mwatervertical">
+						<div class="help-block">
+							<small class="text-impo hide" id="Mwatervererr">
+									<span class="icon iconfont icon-androidcancel"></span>垂直偏移量大小限制在[0,4096]或者(0,1)
+							</small>
+						</div>
+					</div>
+				</div>
+			</form>
+		</script>
+		<!--新建水印模版 end-->
+		<script type="text/html" id="mcttraode_res">
+			<div class="showResoConfig">
+				<div class="radio">
+					<label>
+						<input type="radio" name="showResoConfig" checked />不转码&nbsp;&nbsp;
+						<i class="iconfont icon-wenhao1 text-muted" data-toggle="popover"></i>
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" name="showResoConfig" />按输入视频分辨率转码&nbsp;&nbsp;
+						<i class="iconfont icon-wenhao1 text-muted" data-toggle="popover"></i>
+					</label>
+				</div>
+			</div>
+		</script>
+		<script type="text/html" id="mcttraode_video">
+			<div class="showVideoConfig">
+				<div class="radio">
+					<label>
+						<input type="radio" name="showVideoConfig" checked />不转码&nbsp;&nbsp;
+						<i class="iconfont icon-wenhao1 text-muted" data-toggle="popover"></i>
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" name="showVideoConfig" />按输入视频码率转码&nbsp;&nbsp;
+						<i class="iconfont icon-wenhao1 text-muted" data-toggle="popover"></i>
+					</label>
+				</div>
+			</div>
+		</script>
+		<script type="text/html" id="mcttraode_audio">
+			<div class="showAudioConfig">
+				<div class="radio">
+					<label>
+						<input type="radio" name="showaudioConfig" checked />不转码&nbsp;&nbsp;
+						<i class="iconfont icon-wenhao1 text-muted" data-toggle="popover"></i>
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" name="showaudioConfig" />按输入音频码率转码&nbsp;&nbsp;
+						<i class="iconfont icon-wenhao1 text-muted" data-toggle="popover"></i>
+					</label>
+				</div>
+			</div>
+		</script>
+
+		<script type="text/javascript" src="script/style.js"></script>
+		<script type="text/javascript" src="script/mct.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+				//calendar
+				$(".timecho").each(function() {
+					laydate.render({
+						elem: this,
+						trigger: 'click'
+					});
+				});
+				//伸缩menu
+				jQuery("#jquery-accordion-menu").jqueryAccordionMenu();
+				$("#demo-list li").click(function() {
+					if($(this).hasClass("active")) {
+						$(this).removeClass("active");
+					} else {
+						$(this).addClass("active");
+					}
+				})
+				$("#demo-list li.firstli").trigger("click");
+				var parameters_data = {
+					"format": "H.264",
+					"level": "high",
+					"framerate": "45 fps",
+					"height": "800 px",
+					"width": "600 px",
+					"rate": "12 Kbps",
+					"jiange": "34",
+					"yuzhi": "",
+					"daxiao": "kb",
+					"mosi": "12 Kbps",
+					"fengzi": "Kbps",
+					"yinzi": "12",
+				};
+				$("#MCTtranscoding [data-toggle=popover]").each(function() {
+					var ele = $(this);
+					ele.popover({
+						trigger: "manual",
+						placement: "right",
+						html: 'true',
+						content: template("popovercon", parameters_data),
+					}).on("mouseenter", function() {
+						var _this = this;
+						$(this).popover("show");
+						$(this).siblings(".popover").on("mouseleave", function() {
+							$(_this).popover('hide');
+						});
+					}).on("mouseleave", function() {
+						var _this = this;
+						setTimeout(function() {
+							if(!$(".popover:hover").length) {
+								$(_this).popover("hide");
+							}
+						}, 100);
+					});
+				});
+
+			});
+		</script>
+		<script type="text/javascript">
+			layui.use(['layer', 'form'], function() {
+				var layer = layui.layer,
+					form = layui.form;
+			});
+		</script>
+	</body>
+
+</html>

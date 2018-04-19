@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>修改头像</title>
+		<script src="script/jquery-1.11.1.min.js" type="text/javascript"></script>
+		<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" title="" rel="stylesheet" />
+		<link title="" href="font/iconfont.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/style.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/user.css" rel="stylesheet" type="text/css" />
+		<script src="bootstrap-3.3.5-dist/js/bootstrap.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<nav class="nav navbar-mystyle navbar-fixed-top">
+			<div class="navbar-header-dsc pull-left">
+				<a href="#"><img src="img/logox.png"></a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="li-border">
+						<a class="mystyle-color" href="index.html">管理控制台</a>
+					</li>
+					<li class="dropdown pro_ser li-border">
+						<a href="#" class="dropdown-toggle mystyle-color" data-toggle="dropdown">
+							<span>产品与服务</span>
+							<span class="icon-arrow-down icon iconfont icon-sortdesc"></span>
+						</a>
+						<ul class="dropdown-menu dropdown_">
+							<li>
+								<a href="service-live.html">视频直播</a>
+							</li>
+							<li>
+								<a href="service-vod.html">视频点播</a>
+							</li>
+							<li>
+								<a href="video_material.html">视频编辑</a>
+							</li>
+							<li>
+								<a href="service-meeting.html">视频会议</a>
+							</li>
+							<li>
+								<a href="service-mct.html">媒体转码</a>
+							</li>
+							<li>
+								<a href="service-image.html">图片处理</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav pull-right">
+					<li class="li-border user-nam">
+						<a href="#" class="dropdown-toggle mystyle-color">
+							00000000@qq.com
+						</a>
+						<div class="user_cen">
+							<div class="user_cen_list fix">
+								<a href="modfiy_infor.html"><span class="icon iconfont icon-weibiaoti3"></span><span>基本资料</span></a>
+								<a href="modfiy_pass.html"><span class="icon iconfont icon-xiugaimima"></span><span>修改密码</span></a>
+								<a href="modfiy_touxiang.html"><span class="icon iconfont icon-xiugaitouxiang"></span><span>修改头像</span></a>
+								<a href="user_care.html"><span class="icon iconfont icon-uniE6"></span><span>我的关注</span></a>
+							</div>
+							<div class="user_logout_btn">
+								<a href="http://clouds.fanson.cc/?=login.html">退出登录</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!--nav end-->
+		<div class="down-main">
+			<div class="left-main left-off">
+				<div class="sidebar-fold">
+					<span class="icon iconfont icon-menu"></span>
+				</div>
+				<div class="subNavBox">
+					<ul>
+						<li class="">
+							<a href="service-live.html">
+								<span class="sublist-icon iconfont icon-shipinzhibo"></span>
+								<span class="sub-title">视频直播</span>
+								<div class="Ttitle"><span>视频直播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-vod.html"><span class="sublist-icon iconfont icon-yinshipindianboVOD"></span><span class="sub-title">视频点播</span>
+								<div class="Ttitle"><span>视频点播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="video_material.html"><span class="sublist-icon"><img src="img/videoedit.png" /></span><span class="sub-title">视频编辑</span>
+								<div class="Ttitle"><span>视频编辑</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-meeting.html">
+								<span class="sublist-icon iconfont icon-shipinhuiyi"></span><span class="sub-title">视频互动</span>
+								<div class="Ttitle"><span>视频会议</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-mct.html"><span class="sublist-icon iconfont icon-yinshipinzhuanmaMCT"></span><span class="sub-title">媒体转码</span>
+								<div class="Ttitle"><span>媒体转码</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-image.html"><span class="sublist-icon iconfont icon-img"></span><span class="sub-title">图片处理</span>
+								<div class="Ttitle"><span>图片处理</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="course.html"><span class="sublist-icon iconfont icon-gongcheng" style="font-size: 18px;"></span><span class="sub-title">帮助文档</span>
+								<div class="Ttitle"><span>帮助文档</span></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--left-main end-->
+			<div class="right-service right-product right-off">
+				<div class="right-service-lf">
+					<div class="prodtitle prodnavtit">账号管理</div>
+					<div id="jquery-accordion-menu" class="jquery-accordion-menu">
+						<ul id="demo-list">
+							<li>
+								<a class="classa" href="modfiy_infor.html">基本资料</a>
+							</li>
+							<li>
+								<a class="classa" href="modfiy_pass.html">修改密码</a>
+							</li>
+							<li class="on">
+								<a class="classa" href="modfiy_touxiang.html">修改头像</a>
+							</li>
+							<li>
+								<a class="classa" href="user_care.html">我的关注</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--right-service-lf end-->
+				<div class="dislpayArrow" onClick="displaynavbar(this)">
+					<div class="dislpayArrow_inner">
+						<div class="dislpayArrow_bg"></div>
+						<div class="dislpayArrow_coll">
+							<span class="icon iconfont icon-zhankai icon-collapse-left"></span>
+							<span class="icon iconfont icon-unfold icon-collapse-right"></span></div>
+					</div>
+				</div>
+				<!--dislpayArrow end-->
+				<div class="right-service-rt">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="console-title border-bottom margin-b2">
+								<h2>	修改头像</h2>
+							</div>
+							<div class="margin-b2 tab touxiang" role="tabpanel">
+								<!-- Nav tabs -->
+								<ul class="nav nav-tabs touxiang-tab" role="tablist">
+									<li role="presentation" class="active">
+										<a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">个性头像编辑</a>
+									</li>
+									<li role="presentation">
+										<a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">本地头像上传</a>
+									</li>
+								</ul>
+								<!-- Tab panes -->
+								<div class="tab-content tabs modfiy_infor">
+									<div role="tabpanel" class="tab-pane fade in modfiy-toux active" id="Section1">
+										<p class="touxip">从个性头像库里选择一张图片作为头像</p>
+										<div class="fix">
+											<div class="pull-left personality fix">
+												<ul>
+													<li>
+														<a href="javascript:"><img src="img/personality1.jpg"></a>
+													</li>
+													<li>
+														<a href="javascript:"><img src="img/personality2.jpg"></a>
+													</li>
+													<li>
+														<a href="javascript:"><img src="img/personality3.jpg"></a>
+													</li>
+													<li>
+														<a href="javascript:"><img src="img/personality4.jpg"></a>
+													</li>
+													<li>
+														<a href="javascript:"><img src="img/personality5.jpg"></a>
+													</li>
+													<li>
+														<a href="javascript:"><img src="img/personality6.jpg"></a>
+													</li>
+												</ul>
+											</div>
+											<div class="pull-left personality_view">
+												<span><img src="img/touxiang.png"></span>
+												<span>头像预览</span>
+											</div>
+										</div>
+										<div class="toux_btn">
+											<div class="form-group">
+												<button type="button" class="btn blue-normal-btn" id="toux_confirm">确定</button>
+												<button type="button" class="btn btn-default" id="toux_cancel">取消</button>
+											</div>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade modfiy-toux local" id="Section2">
+										<div class="container1">
+											<p class="touxip">从电脑里挑选一张好图作为头像吧</p>
+											<div class="imageBox">
+												<div class="thumbBox"></div>
+												<div class="spinner" style="display: none;">Loading...</div>
+											</div>
+											<div class="action clearfix">
+												<div class="new-contentarea text-center">
+													<a href="javascript:void(0)" class="upload-img">
+														<label for="upload-file">上传图像</label>
+													</a>
+													<input type="file" class="" name="upload-file" id="upload-file" accept="image/gif, image/jpeg, image/png">
+												</div>
+												<input type="button" id="ensure" class="Btnsty_peyton" value="确定">
+												<input type="button" id="btnCrop" class="Btnsty_peyton" value="裁切">
+												<input type="button" id="btnZoomIn" class="Btnsty_peyton" value="+">
+												<input type="button" id="btnZoomOut" class="Btnsty_peyton" value="-">
+											</div>
+											<p class="touxip">支持jpg/png格式图片，文件需小于2M</p>
+											<div class="touxi_view">
+												<div class="cropped text-center"></div>
+												<p class="touxip text-center">裁剪头像预览</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--touxiang end-->
+						</div>
+					</div>
+				</div>
+				<!--right-service-rt end-->
+			</div>
+			<!--right-product end-->
+		</div>
+		<!--down-main end-->
+		<script type="text/javascript" src="script/style.js"></script>
+		<script type="text/javascript" src="script/cropbox.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				//个性头像编辑
+				var osrc;
+				var oldSrc = $(".personality_view span").eq(0).find("img").attr("src");
+				$(".personality li").click(function() {
+					osrc = $(this).find("img").attr("src");
+					$(".personality_view span").eq(0).find("img").attr("src", osrc);
+				});
+				$("#toux_cancel").click(function() {
+					$(".personality_view span").eq(0).find("img").attr("src", oldSrc);
+				});
+				$("#toux_confirm").click(function() { //选择当前图片作为头像
+					//...dosomething
+				});
+
+			});
+			$(window).load(function() {
+				var options = {
+					thumbBox: '.thumbBox',
+					spinner: '.spinner',
+					imgSrc: 'img/avatar.png'
+				}
+				var cropper = $('.imageBox').cropbox(options);
+				var img;
+				$('#upload-file').on('change', function() {
+					var reader = new FileReader();
+					reader.onload = function(e) {
+						options.imgSrc = e.target.result;
+						cropper = $('.imageBox').cropbox(options);
+					}
+					reader.readAsDataURL(this.files[0]);
+					this.files = [];
+				})
+				$('#btnCrop').on('click', function() {
+					img = cropper.getDataURL();
+					$('.cropped').html('');
+					$('.cropped').append('<img src="' + img + '" align="absmiddle">');
+					img = img.slice(22);
+					console.log(img);
+				})
+				$("#ensure").on("click", function() {
+					console.log(img);
+					$.ajax({
+						url: "http://192.168.1.137:8080/test.php",
+						type: "post",
+						//dataType: "json",
+						data: {
+							"png": img
+						},
+						success: function(data) {
+							//alert(data);
+						}
+					});
+				});
+				$('#btnZoomIn').on('click', function() {
+					cropper.zoomIn();
+				})
+				$('#btnZoomOut').on('click', function() {
+					cropper.zoomOut();
+				})
+			});
+		</script>
+	</body>
+
+</html>

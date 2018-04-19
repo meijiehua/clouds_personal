@@ -1,0 +1,2 @@
+styleName:htu,styleBody:image/auto-orient,0/quality,q_90
+styleName:oo,styleBody:image/auto-orient,1/quality,q_90

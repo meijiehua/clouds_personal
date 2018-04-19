@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>新建工作流</title>
+		<script src="script/jquery-1.11.1.min.js" type="text/javascript"></script>
+		<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" title="" rel="stylesheet" />
+		<link title="" href="font/iconfont.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/style.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/services.css" rel="stylesheet" type="text/css" />
+		<script src="bootstrap-3.3.5-dist/js/bootstrap.js" type="text/javascript"></script>
+		<script type="text/javascript" src="script/template.js"></script>
+	</head>
+
+	<body>
+		<nav class="nav navbar-mystyle navbar-fixed-top">
+			<div class="navbar-header-dsc pull-left">
+				<a href="#"><img src="img/logox.png"></a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="li-border">
+						<a class="mystyle-color" href="index.html">管理控制台</a>
+					</li>
+					<li class="dropdown pro_ser li-border">
+						<a href="#" class="dropdown-toggle mystyle-color" data-toggle="dropdown">
+							<span>产品与服务</span>
+							<span class="icon-arrow-down icon iconfont icon-sortdesc"></span>
+						</a>
+						<ul class="dropdown-menu dropdown_">
+							<li>
+								<a href="service-live.html">视频直播</a>
+							</li>
+							<li>
+								<a href="service-vod.html">视频点播</a>
+							</li>
+							<li>
+								<a href="video_material.html">视频编辑</a>
+							</li>
+							<li>
+								<a href="service-meeting.html">视频会议</a>
+							</li>
+							<li>
+								<a href="service-mct.html">媒体转码</a>
+							</li>
+							<li>
+								<a href="service-image.html">图片处理</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav pull-right">
+					<li class="li-border user-nam">
+						<a href="#" class="dropdown-toggle mystyle-color">
+							00000000@qq.com
+						</a>
+						<div class="user_cen">
+							<div class="user_cen_list fix">
+								<a href="modfiy_infor.html"><span class="icon iconfont icon-weibiaoti3"></span><span>基本资料</span></a>
+								<a href="modfiy_pass.html"><span class="icon iconfont icon-xiugaimima"></span><span>修改密码</span></a>
+								<a href="modfiy_touxiang.html"><span class="icon iconfont icon-xiugaitouxiang"></span><span>修改头像</span></a>
+								<a href="user_care.html"><span class="icon iconfont icon-uniE6"></span><span>我的关注</span></a>
+							</div>
+							<div class="user_logout_btn">
+								<a href="http://clouds.fanson.cc/?=login.html">退出登录</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!--nav end-->
+		<div class="down-main">
+			<div class="left-main left-off">
+				<div class="sidebar-fold">
+					<span class="icon iconfont icon-menu"></span>
+				</div>
+				<div class="subNavBox">
+					<ul>
+						<li>
+							<a href="service-live.html">
+								<span class="sublist-icon iconfont icon-shipinzhibo"></span>
+								<span class="sub-title">视频直播</span>
+								<div class="Ttitle"><span>视频直播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-vod.html"><span class="sublist-icon iconfont icon-yinshipindianboVOD"></span><span class="sub-title">视频点播</span>
+								<div class="Ttitle"><span>视频点播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="video_material.html"><span class="sublist-icon"><img src="img/videoedit.png" /></span><span class="sub-title">视频编辑</span>
+								<div class="Ttitle"><span>视频编辑</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-meeting.html">
+								<span class="sublist-icon iconfont icon-shipinhuiyi"></span><span class="sub-title">视频互动</span>
+								<div class="Ttitle"><span>视频会议</span></div>
+							</a>
+						</li>
+						<li class="active">
+							<a href="service-mct.html"><span class="sublist-icon iconfont icon-yinshipinzhuanmaMCT"></span><span class="sub-title">媒体转码</span>
+								<div class="Ttitle"><span>媒体转码</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-image.html"><span class="sublist-icon iconfont icon-img"></span><span class="sub-title">图片处理</span>
+								<div class="Ttitle"><span>图片处理</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="course.html"><span class="sublist-icon iconfont icon-gongcheng" style="font-size: 18px;"></span><span class="sub-title">帮助文档</span>
+								<div class="Ttitle"><span>帮助文档</span></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--left-main end-->
+			<div class="right-service right-product right-off">
+				<div class="right-service-lf">
+					<div class="prodtitle prodnava"><span class="nav_icon icon iconfont icon-uniE11" onclick="history.go(-1)"></span></div>
+					<div id="jquery-accordion-menu" class="jquery-accordion-menu">
+						<ul id="demo-list">
+							<li class="on">
+								<a href="bulit-live.html">新建工作流</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--right-service-lf end-->
+				<div class="dislpayArrow" onClick="displaynavbar(this)">
+					<div class="dislpayArrow_inner">
+						<div class="dislpayArrow_bg"></div>
+						<div class="dislpayArrow_coll">
+							<span class="icon iconfont icon-zhankai icon-collapse-left"></span>
+							<span class="icon iconfont icon-unfold icon-collapse-right"></span></div>
+					</div>
+				</div>
+				<!--dislpayArrow end-->
+				<div class="right-service-rt">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="console-title border-bottom">
+								<h2>工作流管理</h2>
+							</div>
+							<div class="alert alert-info alert-dismissible margin-top-10 text-muted mctalert" role="alert">
+								<i class="glyphicon glyphicon-exclamation-sign"></i> 请不要配置一个工作流的输入路径为另外一个工作流输入路径的前缀，否则会一个增量文件触发两次工作流执行实例。
+							</div>
+							<div class="workflow-bar margin-b2">
+								<ul class="flow-step row">
+									<li class="col-md-6 step step-first step-active">配置工作流</li>
+									<li class="col-md-6 step step-end">完成</li>
+								</ul>
+							</div>
+							<!--workflow-bar end-->
+							<div class="workflow-con">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<div class="col-sm-4">
+											<label style="margin-bottom: 5px;font-weight: 700;">工作流名称</label>
+											<input type="text" tabindex="0" data-trigger="focus" data-toggle="popover" title="" data-placement="top" data-content="<ul><li>1.只能包含中英文、数字、_-.%</li><li>2.水印模板名称长度限制在128个字节之内</li></ul>" placeholder="请输入工作流名称" class="form-control" id="bulitflow_name">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-4">
+											<label style="margin-bottom: 5px;font-weight: 700;">配置方案</label>
+											<select class="form-control" id="flow_config">
+												<option value="0">M3U8切片工作流</option>
+												<option value="1">预置智能模板工作流</option>
+												<option value="2">多码率多格式工作流</option>
+												<option value="3">FLV多码率工作流</option>
+												<option value="4">M3U8多码率工作流</option>
+												<option value="5">MP4多码率工作流</option>
+												<option value="6" selected>自定义</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-12">
+											<label style="margin-bottom: 5px;font-weight: 700;">拓扑结构</label>
+											<div class="topology-map">
+												<div class="topology-container">
+													<canvas id="topologyLine" width="920"></canvas>
+													<div class="map">
+														<table>
+															<tbody id="map_body"></tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+											<!--topology-map end-->
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="text-center">
+											<button type="button" disabled class="btn btn-primary btn-lg" id="flow_next">下一步</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<!--workflow-con end-->
+							<div class="workflow-done hide">
+								<div class="clearfix margin-b2">
+									<div class="pull-left col-padding">
+										<span class="iconfont icon-check1 text-success" style="font-size: 32px;"></span>
+									</div>
+									<div class="pull-left col-padding">
+										<p><strong class="lead">已完成工作流创建</strong></p>
+										<p class="text-muted">将视频上传到存储空间，将按照工作流配置自动处理.</p>
+									</div>
+								</div>
+								<div class="text-center">
+									<button type="submit" class="btn btn-primary btn-lg" onclick="window.location.href='MCT-library.html'">到视频管理页上传</button>
+									<button type="submit" class="btn btn-default btn-lg" onclick="window.location.href='MCT-setup.html'">管理工作流</button>
+								</div>
+							</div>
+							<!--workflow-done end-->
+						</div>
+					</div>
+				</div>
+				<!--right-service-rt end-->
+			</div>
+			<!--right-product end-->
+		</div>
+		<!--down-main end-->
+		<div class="modal fade" tabindex="-1" role="dialog" data-backdrop="false" data-keyboard="false" id="myModal">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Modal title</h4>
+					</div>
+					<div class="modal-body"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">确定</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /myModal -->
+		<div class="modal fade" tabindex="-1" role="dialog" data-backdrop="false" data-keyboard="false" id="chooseModal">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Modal title</h4>
+					</div>
+					<div class="modal-body"></div>
+					<div class="modal-footer">
+						<small class="text-impo hide btnerr">
+							<span class="icon iconfont icon-androidcancel"></span>一次只能选择1路转码
+						</small>
+						<button type="button" disabled="disabled" class="btn btn-primary" id="choose_primary">确定</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /chooseModal -->
+		<script type="text/html" id="map_custom">
+			<tr>
+				<td class="col-0" id="col-0">
+					<div class="node start">
+						<span>输入</span>
+						<div class="actions">
+							<ul class="workflow-item hide">
+								<li class="analysis">分析</li>
+								<li class="transcode">转码</li>
+								<li class="snapshot">截图</li>
+							</ul>
+							<i class="icon iconfont icon-uniE4 workflow-input" data-toggle="modal" data-target="#myModal"></i>
+							<i class="icon iconfont icon-uniE"></i>
+						</div>
+					</div>
+				</td>
+				<td class="col-4">
+					<div class="node report">
+						<span>完成</span>
+						<div class="actions">
+							<i class="icon iconfont icon-uniE4 workflow-complete" data-toggle="modal" data-target="#myModal"></i>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</script>
+		<!--配置方案－－自定义 end-->
+		<script type="text/html" id="map_m3u8">
+			<tr>
+				<td class="col-0" id="col-0">
+					<div class="node start">
+						<span>输入</span>
+						<div class="actions">
+							<ul class="workflow-item hide">
+								<li class="analysis">分析</li>
+								<li class="transcode">转码</li>
+								<li class="snapshot">截图</li>
+							</ul>
+							<i class="icon iconfont icon-uniE4 workflow-input" data-toggle="modal" data-target="#myModal"></i>
+							<i class="icon iconfont icon-uniE"></i>
+						</div>
+					</div>
+				</td>
+				<td class="col-1" id="col-1">
+					{{include "flowsnapshot"}} {{include "flowtranscode"}}
+				</td>
+				<td class="col-4">
+					<div class="node report">
+						<span>完成</span>
+						<div class="actions">
+							<i class="icon iconfont icon-uniE4 workflow-complete" data-toggle="modal" data-target="#myModal"></i>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</script>
+		<!--配置方案－－m3u8切片工作流 end-->
+		<script type="text/html" id="map_preset">
+			<tr>
+				<td class="col-0" id="col-0">
+					<div class="node start">
+						<span>输入</span>
+						<div class="actions">
+							<ul class="workflow-item hide">
+								<li class="analysis">分析</li>
+								<li class="transcode">转码</li>
+								<li class="snapshot">截图</li>
+							</ul>
+							<i class="icon iconfont icon-uniE4 workflow-input" data-toggle="modal" data-target="#myModal"></i>
+							<i class="icon iconfont icon-uniE"></i>
+						</div>
+					</div>
+				</td>
+				<td class="col-1" id="col-1">
+					{{include "flowsnapshot"}} {{include "flowanalysis"}}
+				</td>
+				<td class="col-4">
+					<div class="node report">
+						<span>完成</span>
+						<div class="actions">
+							<i class="icon iconfont icon-uniE4 workflow-complete" data-toggle="modal" data-target="#myModal"></i>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</script>
+		<!--配置方案－－预置智能模板工作流 end-->
+		<script type="text/html" id="map_mulltirate">
+			<tr>
+				<td class="col-0" id="col-0">
+					<div class="node start">
+						<span>输入</span>
+						<div class="actions">
+							<ul class="workflow-item hide">
+								<li class="analysis">分析</li>
+								<li class="transcode">转码</li>
+								<li class="snapshot">截图</li>
+							</ul>
+							<i class="icon iconfont icon-uniE4 workflow-input" data-toggle="modal" data-target="#myModal"></i>
+							<i class="icon iconfont icon-uniE"></i>
+						</div>
+					</div>
+				</td>
+				<td class="col-1" id="col-1">
+					{{include "flowsnapshot"}} {{include "flowtranscode"}} {{include "flowtranscode"}} {{include "flowtranscode"}}
+				</td>
+				<td class="col-4">
+					<div class="node report">
+						<span>完成</span>
+						<div class="actions">
+							<i class="icon iconfont icon-uniE4 workflow-complete" data-toggle="modal" data-target="#myModal"></i>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</script>
+		<!--配置方案－－多码率多格式工作流 end-->
+		<script type="text/html" id="flow_input">
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label class="col-sm-3 control-label">输入路径：</label>
+					<div class="col-sm-6"><input type="text" class="form-control flowinput_url"></div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">转码管道：</label>
+					<div class="col-sm-6">
+						<select class="form-control" id="flow_piping">
+							<option value="0" selected>mts-service-pipeline</option>
+						</select>
+					</div>
+				</div>
+			</form>
+		</script>
+		<!--配置工作流－－输入 end-->
+		<script type="text/html" id="flow-transcode">
+			<form class="form-horizontal" id="flow_trans">
+				<div class="form-group">
+					<label class="col-sm-3 control-label">名称：</label>
+					<div class="col-sm-6"><input type="text" class="form-control" id="flow_name"></div>
+					<div class="col-sm-3" style="padding: 0;line-height: 14px;">
+						<small class="text-impo hide" id="flow_name_error">
+							<span class="icon iconfont icon-androidcancel"></span>名称不能为空或包含特殊字符
+						</small>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label" id="flow_label">转码模版：</label>
+					<div class="col-sm-3">
+						<button type="button" class="btn btn-primary" id="flow-template" data-toggle="modal" data-target="#chooseModal">选择</button>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">输出路径：</label>
+					<div class="col-sm-6"><input type="text" class="form-control" id="flow_url"></div>
+					<div class="col-sm-3" style="padding: 0;line-height:32px;">
+						<small class="text-impo hide" id="flow_url_error1">
+							<span class="icon iconfont icon-androidcancel"></span>输出路径不能为空
+						</small>
+						<small class="text-impo hide" id="flow_url_error2">
+							<span class="icon iconfont icon-androidcancel"></span>输出路径格式不正确
+						</small>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">使用水印：</label>
+					<div class="col-sm-6">
+						<select class="form-control" id="flow_masksel">
+							<option value="不使用水印" selected>不使用水印</option>
+						</select>
+					</div>
+				</div>
+			</form>
+		</script>
+		<!--配置工作流--转码编辑-->
+		<script type="text/html" id="flow_choose">
+			<div role="tabpanel" class="tab information_tab">
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active">
+						<a href="#Section1" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true">预置静态模版</a>
+					</li>
+					<li role="presentation" class="">
+						<a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false">自定义模版</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane fade active in" id="Section1">
+						<div class="posit radio" style="margin-left: 1em;">
+							<label><input type="radio" checked="" value="全部" name="flowsystem">全部</label>
+							<label><input type="radio" value="mp4" name="flowsystem">mp4</label>
+							<label><input type="radio" value="m3u8" name="flowsystem">m3u8</label>
+							<label><input type="radio" value="flv" name="flowsystem">flv</label>
+							<label><input type="radio" value="mp3" name="flowsystem">mp3</label>
+						</div>
+						<div class="table-responsive newmct-table">
+							<table class="table table-hover MCT-table">
+								<thead>
+									<tr>
+										<th width="10"><input type="checkbox" id="flowsystem-all"></th>
+										<th class="col-sm-3">输出格式</th>
+										<th class="col-sm-3">模板名</th>
+										<th class="col-sm-3 text-center">码率(kpbs)</th>
+										<th class="col-sm-3 text-center">分辨率/宽度</th>
+									</tr>
+								</thead>
+								<tbody id="flowsystem-body">
+									<tr>
+										<td width="10"><input type="checkbox" value="转封装-FLV" class="flow_sys"></td>
+										<td class="col-sm-3">flv</td>
+										<td class="col-sm-3 templa_name">转封装-FLV</td>
+										<td class="col-sm-3 text-center">-</td>
+										<td class="col-sm-3 text-center">-</td>
+									</tr>
+									<tr>
+										<td width="10"><input type="checkbox" value="Web端(FLV)-FHD" class="flow_sys"></td>
+										<td class="col-sm-3">flv</td>
+										<td class="col-sm-3 templa_name">Web端(FLV)-FHD</td>
+										<td class="col-sm-3 text-center">≤3800</td>
+										<td class="col-sm-3 text-center">1920</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!--预置静态模版结束-->
+					<div role="tabpanel" class="tab-pane fade" id="Section2">
+						<div class="posit radio" style="margin-left: 1em;">
+							<label><input type="radio" checked="" value="全部" name="flow-custom">全部</label>
+							<label><input type="radio" value="mp4" name="flow-custom">mp4</label>
+							<label><input type="radio" value="m3u8" name="flow-custom">m3u8</label>
+							<label><input type="radio" value="flv" name="flow-custom">flv</label>
+							<label><input type="radio" value="mp3" name="flow-custom">mp3</label>
+						</div>
+						<div class="table-responsive newmct-table">
+							<table class="table table-hover MCT-table">
+								<thead>
+									<tr>
+										<th width="10"><input type="checkbox" id="flowcustom-all"></th>
+										<th class="col-sm-3">输出格式</th>
+										<th class="col-sm-3">模板名</th>
+										<th class="col-sm-3 text-center">码率(kpbs)</th>
+										<th class="col-sm-3 text-center">分辨率/宽度</th>
+									</tr>
+								</thead>
+								<tbody id="flowcustom-body">
+									<tr>
+										<td width="10"><input type="checkbox" value="bgvdfhjj" class="flow_cus"></td>
+										<td class="col-sm-3">mp4</td>
+										<td class="col-sm-3 templa_name">bgvdfhjj</td>
+										<td class="col-sm-3 text-center">-</td>
+										<td class="col-sm-3 text-center">-</td>
+									</tr>
+									<tr>
+										<td width="10"><input type="checkbox" value="mnbfvjdhvdjvkdfvkdv" class="flow_cus"></td>
+										<td class="col-sm-3">m3u8</td>
+										<td class="col-sm-3 templa_name">mnbfvjdhvdjvkdfvkdv</td>
+										<td class="col-sm-3 text-center">-</td>
+										<td class="col-sm-3 text-center">-</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!--自定义模版结束-->
+				</div>
+			</div>
+		</script>
+		<!--配置工作流－－转码－－转码模版选择-->
+		<script type="text/html" id="flow_snapshot">
+			<form class="form-horizontal" id="worksanph">
+				<div class="form-group">
+					<label class="col-sm-3 control-label">截图方式</label>
+					<div class="col-sm-6">
+						<select class="form-control" id="work_screenshot">
+							<option value="0" selected="selected">单张截图</option>
+							<option value="1">多张截图</option>
+							<option value="2">平均截图</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">名称</label>
+					<div class="col-sm-6">
+						<input type="text" class="form-control" id="work_sanpname" />
+					</div>
+					<div class="col-sm-3" style="padding: 0;line-height: 14px;">
+						<small class="text-impo hide" id="worksanpname_error">
+							<span class="icon iconfont icon-androidcancel"></span>名称不能为空或包含中文及特殊字符
+						</small>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">输出路径：</label>
+					<div class="col-sm-6"><input type="text" class="form-control" id="work_sanpurl"></div>
+					<div class="col-sm-3" style="padding: 0;line-height:32px;">
+						<small class="text-impo hide" id="worksanpurl_error1">
+							<span class="icon iconfont icon-androidcancel"></span>输出路径不能为空
+						</small>
+						<small class="text-impo hide" id="worksanpurl_error2">
+							<span class="icon iconfont icon-androidcancel"></span>输出路径格式不正确
+						</small>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">开始时间</label>
+					<div class="col-sm-6">
+						<select class="inline-block" id="flow_hour"></select>&nbsp;
+						<select class="inline-block" id="flow_min"></select>&nbsp;
+						<select class="inline-block" id="flow_sec"></select>&nbsp;&nbsp;(时：分：秒)
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">设为封面</label>
+					<div class="ckbx-style-8 inline-block">
+						<input type="checkbox" id="flow_cover" value="0" name="">
+						<label for="flow_cover"></label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">关键帧</label>
+					<div class="ckbx-style-8 inline-block">
+						<input type="checkbox" id="flow-key" checked value="0" name="">
+						<label for="flow-key"></label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">图片宽度</label>
+					<div class="col-sm-6">
+						<input type="text" class="form-control" id="work_width" />
+					</div>
+					<div class="col-sm-3" style="padding: 0;line-height:14px;">
+						<small class="text-impo hide" id="workwidth">
+							<span class="icon iconfont icon-androidcancel"></span>取值类型为正整数且取值范围8至4096
+						</small>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">图片高度</label>
+					<div class="col-sm-6">
+						<input type="text" class="form-control" id="work_height" />
+					</div>
+					<div class="col-sm-3" style="padding: 0;line-height:14px;">
+						<small class="text-impo hide" id="workheight">
+							<span class="icon iconfont icon-androidcancel"></span>取值类型为正整数且取值范围8至4096
+						</small>
+					</div>
+				</div>
+			</form>
+		</script>
+		<!--配置工作流－－截图编辑-->
+		<script type="text/html" id="flow_complete">
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label class="col-sm-3 control-label">媒体完成类型：</label>
+					<div class="col-sm-6">
+						<div class="posit radio" style="margin-left: 1em;">
+							<label><input type="radio" value="自动" name="flow_type">自动</label>
+							<label><input type="radio" value="手动" name="flow_type" checked="">手动</label>
+						</div>
+					</div>
+				</div>
+			</form>
+		</script>
+		<!--配置工作流－－完成-->
+		<script type="text/html" id="flowanalysis">
+			<div class="node Analysis">
+				<span>分析</span>
+				<div class="actions">
+					<i class="icon iconfont icon-uniE1" data-toggle="modal" data-target="#myModal"></i>
+				</div>
+			</div>
+		</script>
+		<script type="text/html" id="flowtranscode">
+			<div class="node Transcode">
+				<span>转码</span>
+				<div class="actions">
+					<i class="icon iconfont icon-uniE4 work-transcode" data-toggle="modal" data-target="#myModal"></i>
+					<i class="icon iconfont icon-uniE1" data-toggle="modal" data-target="#myModal"></i>
+				</div>
+			</div>
+		</script>
+		<script type="text/html" id="flowsnapshot">
+			<div class="node Snapshot">
+				<span>截图</span>
+				<div class="actions">
+					<i class="icon iconfont icon-uniE4 work-snapshot" data-toggle="modal" data-target="#myModal"></i>
+					<i class="icon iconfont icon-uniE1" data-toggle="modal" data-target="#myModal"></i>
+				</div>
+			</div>
+		</script>
+
+		<script type="text/javascript" src="script/style.js"></script>
+		<script type="text/javascript" src="script/mct.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('[data-toggle="popover"]').popover({
+					html: true
+				});
+
+				var canvas = document.getElementById("topologyLine"),
+					context;
+				if(!canvas.getContext) {
+					alert('你的浏览器不支持 canvas!');
+					return;
+				}
+				context = canvas.getContext('2d');
+				var $height, $lf, $lf1, $lf2, $start, $end;
+				$lf = $("#topologyLine").offset().left;
+				var flow_config = $("#flow_config option:selected").val();
+				//init
+				$("#map_body").append(template("map_custom", []));
+				resizePoint();
+				var col1_flag = true;
+				var col1_dang = 0;
+				var col1_start, col1_end;
+				$("#flow_config").change(function() {
+						$("#map_body").html("");
+						flow_config = $(this).children('option:selected').val();
+						switch(flow_config) {
+							case "0":
+								col1_flag = false;
+								col1_dang = 1;
+								$("#map_body").append(template("map_m3u8", []));
+								resizePoint();
+								resizeRoute();
+								break;
+							case "1":
+								col1_flag = false;
+								col1_dang = 1;
+								$("#map_body").append(template("map_preset", []));
+								resizePoint();
+								resizeRoute();
+								break;
+							case "2":
+								col1_flag = false;
+								col1_dang = 3;
+								$("#map_body").append(template("map_mulltirate", []));
+								resizePoint();
+								resizeRoute();
+								break;
+							case "3":
+								col1_flag = false;
+								col1_dang = 3;
+								$("#map_body").append(template("map_mulltirate", []));
+								resizePoint();
+								resizeRoute();
+								break;
+							case "4":
+								col1_flag = false;
+								col1_dang = 3;
+								$("#map_body").append(template("map_mulltirate", []));
+								resizePoint();
+								resizeRoute();
+								break;
+							case "5":
+								col1_flag = false;
+								col1_dang = 3;
+								$("#map_body").append(template("map_mulltirate", []));
+								resizePoint();
+								resizeRoute();
+								break;
+							default:
+								$("#map_body").append(template("map_custom", []));
+								resizePoint();
+						}
+					})
+					//
+				$("body").on("click", ".node .icon-uniE", function() {
+					if(!$(this).hasClass("active")) {
+						$(this).addClass("active");
+						$(this).prev().animate({
+							"opacity": "0"
+						}, 100).siblings(".workflow-item").removeClass("hide");
+					} else {
+						$(this).removeClass("active");
+						$(this).prev().animate({
+							"opacity": "1"
+						}, 100).siblings(".workflow-item").addClass("hide");
+					}
+				});
+				$("body").on("click", ".start .workflow-item li", function() {
+					var imgData = context.getImageData(0, 0, canvas.width, canvas.height);
+					var listit1 = $(this).text();
+					var otd = $('<td class="col-1" id="col-1"></td>');
+					if(col1_flag == true) {
+						if(listit1 == "分析") {
+							otd.html(template("flowanalysis", []));
+							$("#col-0").after(otd);
+						} else if(listit1 == "转码") {
+							otd.html(template("flowtranscode", []));
+							$("#col-0").after(otd);
+						} else {
+							otd.html(template("flowsnapshot", []));
+							$("#col-0").after(otd);
+						}
+						col1_flag = false;
+						resizePoint();
+					} else {
+						if(listit1 == "分析") {
+							$("#col-1").append(template("flowanalysis", []));
+						} else if(listit1 == "转码") {
+							$("#col-1").append(template("flowtranscode", []));
+						} else {
+							$("#col-1").append(template("flowsnapshot", []));
+						}
+						$height = $(".topology-container").innerHeight();
+						canvas.height = $height;
+						context.putImageData(imgData, 0, 0);
+						context.beginPath();
+						context.strokeStyle = "#c8c8c8";
+						col1_start = $("#col-1 .node:first").offset().left - $lf - 20;
+						col1_end = $(".report").offset().left - $lf - 20;
+						context.moveTo(col1_start + 0.5, (col1_dang * 50 + 42) + 0.5);
+						context.lineTo(col1_start + 0.5, ((col1_dang + 1) * 50 + 42) + 0.5);
+						context.lineTo(col1_end + 0.5, ((col1_dang + 1) * 50 + 42) + 0.5);
+						context.lineTo(col1_end + 0.5, (col1_dang * 50 + 42) + 0.5);
+						context.stroke();
+						context.closePath();
+						col1_dang++;
+					}
+					$(".node .icon-uniE").removeClass("active");
+					$(".node .icon-uniE").prev().animate({
+						"opacity": "1"
+					}, 100).siblings(".workflow-item").addClass("hide");
+				});
+				//点击删除按钮
+				$("body").on("click", "#col-1 .icon-uniE1", function() {
+					$(".modal-body").html("");
+					var $this = $(this)
+					var nodetit = $this.parent().prev().text();
+					$(".modal-title").text("删除节点 - " + nodetit);
+					var odiv = $('<div><span class="iconfont icon-jinggao1" style="color:#F90;font-size: 45px;display: inline-block;vertical-align: middle;"></span><p style="display: inline-block;margin: 6px 10px 0px;font-size: 12px;vertical-align: middle;">删除当前节点会同时清空其所有子节点，确认删除？</p></div>');
+					$(".modal-body").append(odiv);
+					var llw = $(".report").offset().left - $this.parent().parent().offset().left + 30;
+					var $length = $("#col-1 .node").length;
+					$(".modal-footer .btn-primary").on("click", function() {
+						$this.parent().parent().remove();
+						$length = $("#col-1 .node").length;
+						if($length == 0) {
+							$("#col-1").remove();
+							$height = $(".topology-container").innerHeight();
+							canvas.height = $height;
+							resizePoint();
+							col1_flag = true;
+						} else {
+							var imgData = context.getImageData(0, 0, canvas.width, canvas.height);
+							$height = $(".topology-container").innerHeight();
+							canvas.height = $height;
+							context.putImageData(imgData, 0, 0);
+							context.clearRect(col1_start + 0.5, (($length - 1) * 50 + 42) + 0.5, llw, 50);
+							col1_dang = $("#col-1 .node").length - 1;
+						}
+						$('#myModal').modal('hide');
+						$(".modal-footer .btn-primary").off("click");
+					});
+				});
+
+				function resizePoint() {
+					$height = $(".topology-container").innerHeight();
+					canvas.height = $height;
+					$lf1 = $(".node.start").offset().left;
+					$lf2 = $(".node.report").offset().left;
+					$start = $lf1 - $lf;
+					$end = $lf2 - $lf;
+					context.lineWidth = 1;
+					context.strokeStyle = "#c8c8c8";
+					context.moveTo($start, 42 + 0.5);
+					context.lineTo($end, 42 + 0.5);
+					context.stroke();
+					context.closePath();
+				}
+
+				function resizeRoute() {
+					for(var i = 0; i < col1_dang; i++) {
+						context.beginPath();
+						context.strokeStyle = "#c8c8c8";
+						col1_start = $("#col-1 .node:first").offset().left - $lf - 20;
+						col1_end = $(".report").offset().left - $lf - 20;
+						context.moveTo(col1_start + 0.5, (i * 50 + 42) + 0.5);
+						context.lineTo(col1_start + 0.5, ((i + 1) * 50 + 42) + 0.5);
+						context.lineTo(col1_end + 0.5, ((i + 1) * 50 + 42) + 0.5);
+						context.lineTo(col1_end + 0.5, (i * 50 + 42) + 0.5);
+						context.stroke();
+						context.closePath();
+					}
+				}
+
+			})
+		</script>
+	</body>
+
+</html>

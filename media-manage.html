@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>媒体转码</title>
+		<script src="script/jquery-1.11.1.min.js" type="text/javascript"></script>
+		<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" title="" rel="stylesheet" />
+		<link title="" href="font/iconfont.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/style.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/services.css" rel="stylesheet" type="text/css" />
+		<script src="bootstrap-3.3.5-dist/js/bootstrap.js" type="text/javascript"></script>
+		<script type="text/javascript" src="laydate/laydate.js"></script>
+		<script src="script/clipboard.min.js"></script>
+		<script type="text/javascript" src="layui/layui.js"></script>
+		<script type="text/javascript" src="script/cropbox.js"></script>
+		<!--UMEDITOR-->
+		<link rel="stylesheet" href="umeditor/themes/default/css/umeditor.css">
+		<script type="text/javascript" src="umeditor/third-party/template.min.js"></script>
+		<script type="text/javascript" src="umeditor/umeditor.config.js"></script>
+		<script type="text/javascript" src="umeditor/umeditor.js"></script>
+		<script type="text/javascript" src="umeditor/lang/zh-cn/zh-cn.js"></script>
+	</head>
+
+	<body>
+		<nav class="nav navbar-mystyle navbar-fixed-top">
+			<div class="navbar-header-dsc pull-left">
+				<a href="#"><img src="img/logox.png"></a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="li-border">
+						<a class="mystyle-color" href="index.html">管理控制台</a>
+					</li>
+					<li class="dropdown pro_ser li-border">
+						<a href="#" class="dropdown-toggle mystyle-color" data-toggle="dropdown">
+							<span>产品与服务</span>
+							<span class="icon-arrow-down icon iconfont icon-sortdesc"></span>
+						</a>
+						<ul class="dropdown-menu dropdown_">
+							<li>
+								<a href="service-live.html">视频直播</a>
+							</li>
+							<li>
+								<a href="service-vod.html">视频点播</a>
+							</li>
+							<li>
+								<a href="video_material.html">视频编辑</a>
+							</li>
+							<li>
+								<a href="service-meeting.html">视频会议</a>
+							</li>
+							<li>
+								<a href="service-mct.html">媒体转码</a>
+							</li>
+							<li>
+								<a href="service-image.html">图片处理</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav pull-right">
+					<li class="li-border user-nam">
+						<a href="#" class="dropdown-toggle mystyle-color">
+							00000000@qq.com
+						</a>
+						<div class="user_cen">
+							<div class="user_cen_list fix">
+								<a href="modfiy_infor.html"><span class="icon iconfont icon-weibiaoti3"></span><span>基本资料</span></a>
+								<a href="modfiy_pass.html"><span class="icon iconfont icon-xiugaimima"></span><span>修改密码</span></a>
+								<a href="modfiy_touxiang.html"><span class="icon iconfont icon-xiugaitouxiang"></span><span>修改头像</span></a>
+								<a href="user_care.html"><span class="icon iconfont icon-uniE6"></span><span>我的关注</span></a>
+							</div>
+							<div class="user_logout_btn">
+								<a href="http://clouds.fanson.cc/?=login.html">退出登录</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!--nav end-->
+		<div class="down-main">
+			<div class="left-main left-off">
+				<div class="sidebar-fold">
+					<span class="icon iconfont icon-menu"></span>
+				</div>
+				<div class="subNavBox">
+					<ul>
+						<li>
+							<a href="service-live.html">
+								<span class="sublist-icon iconfont icon-shipinzhibo"></span>
+								<span class="sub-title">视频直播</span>
+								<div class="Ttitle"><span>视频直播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-vod.html"><span class="sublist-icon iconfont icon-yinshipindianboVOD"></span><span class="sub-title">视频点播</span>
+								<div class="Ttitle"><span>视频点播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="video_material.html"><span class="sublist-icon"><img src="img/videoedit.png" /></span><span class="sub-title">视频编辑</span>
+								<div class="Ttitle"><span>视频编辑</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-meeting.html">
+								<span class="sublist-icon iconfont icon-shipinhuiyi"></span><span class="sub-title">视频互动</span>
+								<div class="Ttitle"><span>视频会议</span></div>
+							</a>
+						</li>
+						<li class="active">
+							<a href="service-mct.html"><span class="sublist-icon iconfont icon-yinshipinzhuanmaMCT"></span><span class="sub-title">媒体转码</span>
+								<div class="Ttitle"><span>媒体转码</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-image.html"><span class="sublist-icon iconfont icon-img"></span><span class="sub-title">图片处理</span>
+								<div class="Ttitle"><span>图片处理</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="course.html"><span class="sublist-icon iconfont icon-gongcheng" style="font-size: 18px;"></span><span class="sub-title">帮助文档</span>
+								<div class="Ttitle"><span>帮助文档</span></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--left-main end-->
+			<div class="right-service right-product right-off">
+				<div class="right-service-lf">
+					<div class="prodtitle prodnava"><span class="nav_icon icon iconfont icon-uniE11" onclick="history.go(-1)"></span></div>
+					<div id="jquery-accordion-menu" class="jquery-accordion-menu">
+						<ul id="demo-list">
+							<li class="on">
+								<a href="live-manage.html">视频详情</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--right-service-lf end-->
+				<div class="dislpayArrow" onClick="displaynavbar(this)">
+					<div class="dislpayArrow_inner">
+						<div class="dislpayArrow_bg"></div>
+						<div class="dislpayArrow_coll">
+							<span class="icon iconfont icon-zhankai icon-collapse-left"></span>
+							<span class="icon iconfont icon-unfold icon-collapse-right"></span></div>
+					</div>
+				</div>
+				<!--dislpayArrow end-->
+				<div class="right-service-rt">
+					<div class="row media-detail">
+						<div class="col-sm-12">
+							<div class="console-title border-bottom">
+								<h2>视频详情</h2>
+							</div>
+							<div class="main-container">
+								<div class="media-infor video-info margin-b2">
+									<div class="cover" style="width: 196px;height: 110px;">
+										<div style="background-image: url(img/undefind.jpg);"></div>
+									</div>
+									<div class="dd">
+										<h3><span>hero.mp4</span></h3>
+										<p>媒体 ID: ad7ff0990419485c8e528ab0ede4958d</p>
+										<p>创建时间: 2017-03-15 11:37:15</p>
+									</div>
+								</div>
+								<!--media_infor end-->
+								<div class="margin-b2 tab information_tab" role="tabpanel">
+									<!-- Nav tabs -->
+									<ul class="nav nav-tabs margin-b2" role="tablist">
+										<li role="presentation" class="active">
+											<a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">媒体管理</a>
+										</li>
+										<li role="presentation">
+											<a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">媒体获取地址</a>
+										</li>
+									</ul>
+									<!-- Tab panes -->
+									<div class="tab-content tabs information">
+										<div role="tabpanel" class="tab-pane fade in active" id="Section1">
+											<h3>基本信息</h3>
+											<form class="form-horizontal form-label-left" id="bulit-live">
+												<div class="form-group">
+													<label class="col-sm-1 control-label" for="">视频名称</label>
+													<div class="col-sm-8">
+														<input type="text" class="form-control" id="media_name" placeholder="请输入视频名称">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-sm-1 control-label" for="">视频描述</label>
+													<div class="col-sm-8">
+														<script id="myEditor" name="content" type="text/plain" style="width:100%;height:200px;"></script>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-sm-1 control-label"></label>
+													<div class="col-sm-6"><input type="button" class="btn btn-primary" value="确定" id="bulit-live_confirm"></div>
+												</div>
+											</form>
+										</div>
+										<!--Section1 end-->
+										<div role="tabpanel" class="tab-pane fade tab-content" id="Section2">
+											<div class="transcode_infor">
+												<ul class="margin-b2">
+													<li class="active">
+														<a href="javascript:">原文件</a>
+													</li>
+													<li>
+														<a href="javascript:" data-toggle="tooltip" data-trigger="hover" title="TRANSCODE_1516355260990">TRANSCODE_1516355260990</a>
+													</li>
+												</ul>
+												<div class="tabcontent">
+													<div class="tabpane active" id="original_doc">
+														<div class="margin-b2">
+															<div class="table-viewer-header clearfix">
+																<span class="table-viewer-topbar-title">基本信息</span>
+																<span class="toggle-drop-down-icon flexible">
+																	<i class="icon iconfont icon-uniED1"></i>
+																</span>
+															</div>
+															<table class="table-default-viewer">
+																<tbody>
+																	<tr>
+																		<td width="33.33333333333333%">
+																			<span class="text-muted" style="padding-right:8px">区域：</span>
+																			<span>华东 1</span>
+																		</td>
+																		<td width="33.33333333333333%">
+																			<span class="text-muted" style="padding-right:8px">时长：</span>
+																			<span>00:00:16</span>
+																		</td>
+																		<td width="33.33333333333333%">
+																			<span class="text-muted" style="padding-right:8px">格式：</span>
+																			<span>mov,mp4,m4a,3gp,3g2,mj2</span>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="33.33333333333333%">
+																			<span class="text-muted" style="padding-right:8px">帧率：</span>
+																			<span>23.00 FPS</span>
+																		</td>
+																		<td width="33.33333333333333%">
+																			<span class="text-muted" style="padding-right:8px">码率：</span>
+																			<span>1936 Kbps</span>
+																		</td>
+																		<td width="33.33333333333333%">
+																			<span class="text-muted" style="padding-right:8px">尺寸：</span>
+																			<span>1920 x 1080 px</span>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="100%" colspan="3">
+																			<span class="text-muted" style="padding-right:8px">大小：</span>
+																			<span>3.82 MB</span>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<div class="margin-b2">
+															<div class="table-viewer-header clearfix">
+																<span class="table-viewer-topbar-title">媒体地址</span>
+																<span class="toggle-drop-down-icon flexible">
+														<i class="icon iconfont icon-uniED1"></i>
+													</span>
+															</div>
+															<table class="table-default-viewer">
+																<tbody>
+																	<tr>
+																		<td width="14.285714285714285%">
+																			<span class="text-muted" style="padding-right:8px">OSS 地址：</span>
+																		</td>
+																		<td width="85.71428571428571%">
+																			<div class="media-source">
+																				<span id="oss_file" data-toggle="tooltip" data-trigger="hover" title="http://fanson.oss-cn-hangzhou.aliyuncs.com/873c70ab0eef46e0a9ac1e228ad...">http://fanson.oss-cn-hangzhou.aliyuncs.com/873c70ab0eef46e0a9ac1e228ad...</span>
+																				<div class="media-actions">
+																					<button class="btn btn-default btn-sm copy" data-clipboard-action="copy" data-clipboard-target="#oss_file" data-toggle="modal" data-target="#myModal">复制</button>
+																				</div>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="14.285714285714285%">
+																			<span class="text-muted" style="padding-right:8px">CDN 加速地址：</span>
+																		</td>
+																		<td width="85.71428571428571%">
+																			<span class=""> - </span>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<!--原文件 end-->
+													<div class="tabpane" id="transcode_1">
+														<div class="margin-b2">
+															<div class="table-viewer-header clearfix">
+																<span class="table-viewer-topbar-title">基本信息</span>
+																<span class="toggle-drop-down-icon flexible">
+														<i class="icon iconfont icon-uniED1"></i>
+													</span>
+															</div>
+															<table class="table-default-viewer">
+																<tbody>
+																	<tr>
+																		<td width="33.33333333333333%">
+																			<span class="text-muted" style="padding-right:8px">区域：</span>
+																			<span>华东 1</span>
+																		</td>
+																		<td width="33.33333333333333%">
+																			<span class="text-muted" style="padding-right:8px">时长：</span>
+																			<span>00:00:16</span>
+																		</td>
+																		<td width="33.33333333333333%">
+																			<span class="text-muted" style="padding-right:8px">格式：</span>
+																			<span>mp4</span>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="33.33333333333333%">
+																			<span class="text-muted" style="padding-right:8px">帧率：</span>
+																			<span>28.58 FPS</span>
+																		</td>
+																		<td width="33.33333333333333%">
+																			<span class="text-muted" style="padding-right:8px">码率：</span>
+																			<span>1373.16 Kbps</span>
+																		</td>
+																		<td width="33.33333333333333%">
+																			<span class="text-muted" style="padding-right:8px">尺寸：</span>
+																			<span>1920 x 1080 px</span>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="100%" colspan="3">
+																			<span class="text-muted" style="padding-right:8px">大小：</span>
+																			<span>904.16 KB</span>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<div class="margin-b2">
+															<div class="table-viewer-header clearfix">
+																<span class="table-viewer-topbar-title">媒体地址</span>
+																<span class="toggle-drop-down-icon flexible">
+														<i class="icon iconfont icon-uniED1"></i>
+													</span>
+															</div>
+															<table class="table-default-viewer">
+																<tbody>
+																	<tr>
+																		<td width="14.285714285714285%">
+																			<span class="text-muted" style="padding-right:8px">OSS 地址：</span>
+																		</td>
+																		<td width="85.71428571428571%">
+																			<div class="media-source">
+																				<span id="oss_file_1" data-toggle="tooltip" data-trigger="hover" title="http://fsoutput.oss-cn-hangzhou.aliyuncs.com/Act-sd-mp4-sd/1274a2a42c3b4494b791375ba4ab641f/eeee.mp4">http://fsoutput.oss-cn-hangzhou.aliyuncs.com/Act-sd-mp4-sd/1274a2a42c3b4494b791375ba4ab641f/eeee.mp4</span>
+																				<div class="media-actions">
+																					<button class="btn btn-default btn-sm copy" data-clipboard-action="copy" data-clipboard-target="#oss_file_1" data-toggle="modal" data-target="#myModal">复制</button>
+																					<button class="btn btn-default btn-sm playbtn" data-toggle="modal" data-target="#myModal">播放</button>
+																				</div>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="14.285714285714285%">
+																			<span class="text-muted" style="padding-right:8px">CDN 加速地址：</span>
+																		</td>
+																		<td width="85.71428571428571%">
+																			<span class=""> - </span>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<!--transcode_1 end-->
+												</div>
+											</div>
+										</div>
+										<!--Section2 end-->
+									</div>
+								</div>
+								<!--end-->
+							</div>
+							<!--main-container end-->
+						</div>
+					</div>
+				</div>
+				<!--right-service-rt end-->
+			</div>
+			<!--right-product end-->
+		</div>
+		<!--down-main end-->
+		<!--modal start-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">  
+                    <span aria-hidden="true">×</span>  
+                </button>
+						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					</div>
+					<div class="modal-body"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--modal end-->
+		<script type="text/javascript" src="script/style.js"></script>
+		<script type="text/javascript" src="script/mct.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("[data-toggle='tooltip']").tooltip();
+				//calendar
+				$(".timecho1").each(function() {
+					laydate.render({
+						elem: this,
+						type: 'datetime',
+						trigger: 'click'
+					});
+				});
+				//umeditor
+				window.um = UM.getEditor('myEditor', {
+					toolbar: ['undo redo | bold italic underline strikethrough | superscript subscript | forecolor backcolor | removeformat |',
+						'insertorderedlist insertunorderedlist | selectall cleardoc paragraph | fontfamily fontsize',
+						'| justifyleft justifycenter justifyright justifyjustify |'
+					]
+				});
+				//
+			});
+			//copy
+			$(".flexible").click(function() {
+				$(this).find("i").toggleClass("on");
+				$(this).parent().siblings("table").toggle();
+			});
+			var clipboard = new Clipboard('.copy');
+			clipboard.on('success', function(e) {
+				$(".modal-body").html("").css("padding", "10px");
+				$("#myModal").show();
+				$(".modal-header,.modal-footer").show();
+				$("#myModalLabel").text("复制");
+				var odiv = $('<div><span class="iconfont icon-jinggao1" style="color:#F90;font-size: 45px;display: inline-block;vertical-align: middle;"></span><p style="display: inline-block;margin: 6px 10px 0px;font-size: 12px;vertical-align: middle;">已复制成功，可使用右键或Ctrl+V进行粘贴</p></div>');
+				$(".modal-body").append(odiv);
+				//	alert("复制成功");
+				console.log("复制成功");
+			});
+			clipboard.on('error', function(e) {
+				$(".modal-body").html("").css("padding", "10px");
+				$("#myModal").show();
+				$(".modal-header,.modal-footer").show();
+				$("#myModalLabel").text("复制");
+				var odiv = $('<div><span class="iconfont icon-jinggao1" style="color:#F90;font-size: 45px;display: inline-block;vertical-align: middle;"></span><p style="display: inline-block;margin: 6px 10px 0px;font-size: 12px;vertical-align: middle;">复制失败！请手动复制</p></div>');
+				$(".modal-body").append(odiv);
+				console.log("复制失败！请手动复制");
+			});
+			$(".modal-footer .btn-default,.modal-footer .btn-primary").on("click", function() {
+				$('#myModal').modal('hide')
+			});
+			$(".transcode_infor li").click(function() {
+				$(this).addClass("active").siblings().removeClass("active");
+				var $index = $(".transcode_infor li").index(this);
+				$(".transcode_infor .tabpane").eq($index).addClass("active").siblings().removeClass("active");
+			});
+			//预览
+			$(".playbtn").click(function() {
+				$(".modal-body").css("padding", "0px").html("");
+				$("#myModal").show();
+				$(".modal-header,.modal-footer").hide();
+				var odiv = $('<div class="player-box"><button type="button" class="player-close" onclick="playclose();"></button><div class="prism-player" id="J_prismPlayer"></div></div>');
+				//播放器盒子加在 id  为 J_prismPlayer 的div中
+				$(".modal-body").append(odiv);
+			});
+
+			function playclose() {
+				$('#myModal').modal('hide')
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>编辑工作流</title>
+		<script src="script/jquery-1.11.1.min.js" type="text/javascript"></script>
+		<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" title="" rel="stylesheet" />
+		<link title="" href="font/iconfont.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/style.css" rel="stylesheet" type="text/css" />
+		<link title="" href="css/services.css" rel="stylesheet" type="text/css" />
+		<script src="bootstrap-3.3.5-dist/js/bootstrap.js" type="text/javascript"></script>
+		<script type="text/javascript" src="script/template.js"></script>
+	</head>
+
+	<body>
+		<nav class="nav navbar-mystyle navbar-fixed-top">
+			<div class="navbar-header-dsc pull-left">
+				<a href="#"><img src="img/logox.png"></a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="li-border">
+						<a class="mystyle-color" href="index.html">管理控制台</a>
+					</li>
+					<li class="dropdown pro_ser li-border">
+						<a href="#" class="dropdown-toggle mystyle-color" data-toggle="dropdown">
+							<span>产品与服务</span>
+							<span class="icon-arrow-down icon iconfont icon-sortdesc"></span>
+						</a>
+						<ul class="dropdown-menu dropdown_">
+							<li>
+								<a href="service-live.html">视频直播</a>
+							</li>
+							<li>
+								<a href="service-vod.html">视频点播</a>
+							</li>
+							<li>
+								<a href="video_material.html">视频编辑</a>
+							</li>
+							<li>
+								<a href="service-meeting.html">视频会议</a>
+							</li>
+							<li>
+								<a href="service-mct.html">媒体转码</a>
+							</li>
+							<li>
+								<a href="service-image.html">图片处理</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav pull-right">
+					<li class="li-border user-nam">
+						<a href="#" class="dropdown-toggle mystyle-color">
+							00000000@qq.com
+						</a>
+						<div class="user_cen">
+							<div class="user_cen_list fix">
+								<a href="modfiy_infor.html"><span class="icon iconfont icon-weibiaoti3"></span><span>基本资料</span></a>
+								<a href="modfiy_pass.html"><span class="icon iconfont icon-xiugaimima"></span><span>修改密码</span></a>
+								<a href="modfiy_touxiang.html"><span class="icon iconfont icon-xiugaitouxiang"></span><span>修改头像</span></a>
+								<a href="user_care.html"><span class="icon iconfont icon-uniE6"></span><span>我的关注</span></a>
+							</div>
+							<div class="user_logout_btn">
+								<a href="http://clouds.fanson.cc/?=login.html">退出登录</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!--nav end-->
+		<div class="down-main">
+			<div class="left-main left-off">
+				<div class="sidebar-fold">
+					<span class="icon iconfont icon-menu"></span>
+				</div>
+				<div class="subNavBox">
+					<ul>
+						<li>
+							<a href="service-live.html">
+								<span class="sublist-icon iconfont icon-shipinzhibo"></span>
+								<span class="sub-title">视频直播</span>
+								<div class="Ttitle"><span>视频直播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-vod.html"><span class="sublist-icon iconfont icon-yinshipindianboVOD"></span><span class="sub-title">视频点播</span>
+								<div class="Ttitle"><span>视频点播</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="video_material.html"><span class="sublist-icon"><img src="img/videoedit.png" /></span><span class="sub-title">视频编辑</span>
+								<div class="Ttitle"><span>视频编辑</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-meeting.html">
+								<span class="sublist-icon iconfont icon-shipinhuiyi"></span><span class="sub-title">视频互动</span>
+								<div class="Ttitle"><span>视频会议</span></div>
+							</a>
+						</li>
+						<li class="active">
+							<a href="service-mct.html"><span class="sublist-icon iconfont icon-yinshipinzhuanmaMCT"></span><span class="sub-title">媒体转码</span>
+								<div class="Ttitle"><span>媒体转码</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="service-image.html"><span class="sublist-icon iconfont icon-img"></span><span class="sub-title">图片处理</span>
+								<div class="Ttitle"><span>图片处理</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="course.html"><span class="sublist-icon iconfont icon-gongcheng" style="font-size: 18px;"></span><span class="sub-title">帮助文档</span>
+								<div class="Ttitle"><span>帮助文档</span></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--left-main end-->
+			<div class="right-service right-product right-off">
+				<div class="right-service-lf">
+					<div class="prodtitle prodnava"><span class="nav_icon icon iconfont icon-uniE11" onclick="history.go(-1)"></span></div>
+					<div id="jquery-accordion-menu" class="jquery-accordion-menu">
+						<ul id="demo-list">
+							<li class="on">
+								<a href="bulit-live.html">工作流执行实例</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--right-service-lf end-->
+				<div class="dislpayArrow" onClick="displaynavbar(this)">
+					<div class="dislpayArrow_inner">
+						<div class="dislpayArrow_bg"></div>
+						<div class="dislpayArrow_coll">
+							<span class="icon iconfont icon-zhankai icon-collapse-left"></span>
+							<span class="icon iconfont icon-unfold icon-collapse-right"></span></div>
+					</div>
+				</div>
+				<!--dislpayArrow end-->
+				<div class="right-service-rt">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="console-title border-bottom margin-b2">
+								<h2>新建工作流_1513326285306 实例状态</h2>
+							</div>
+							<p style="margin-bottom: 50px;">实例 ID：bfa32d94484a49b0a30e631898a2dc34</p>
+							<div class="topology-map" style="margin-bottom: 50px;">
+								<div class="topology-container">
+									<canvas id="topologyLine" width="920"></canvas>
+									<div class="map">
+										<table>
+											<tbody id="workflow_edit">
+												<tr>
+													<td class="col-0" id="col-0">
+														<div tabindex="0" data-toggle="popover" title="" class="node start info" id="shuru">
+															<i class="iconfont icon-xuanzhong2"></i>
+															<span>输入</span>
+														</div>
+													</td>
+													<td class="col-1" id="col-1"></td>
+													<td class="col-4" id="col-4">
+														<div tabindex="0" data-toggle="popover" title="" class="node report info" id="wancheng">
+															<i class="iconfont icon-xuanzhong2"></i>
+															<span>完成</span>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!--topology-map end-->
+						</div>
+					</div>
+				</div>
+				<!--right-service-rt end-->
+			</div>
+			<!--right-product end-->
+		</div>
+		<!--down-main end-->
+		<script type="text/html" id="work_fenxi">
+			<div tabindex="0" data-toggle="popover" title="" class="node Analysis info">
+				<i class="iconfont icon-xuanzhong2"></i>
+				<span>分析</span>
+			</div>
+		</script>
+		<script type="text/html" id="work_jietu">
+			<div tabindex="0" data-toggle="popover" title="" class="node Transcode info" id="zhuanma">
+				<i class="iconfont icon-xuanzhong2"></i>
+				<span>转码</span>
+			</div>
+		</script>
+		<script type="text/html" id="work_zhuanma">
+			<div tabindex="0" data-toggle="popover" title="" class="node Snapshot info" id="jietu">
+				<i class="iconfont icon-xuanzhong2"></i>
+				<span>截图</span>
+			</div>
+		</script>
+		<script type="text/html" id="popver_shuru">
+			<div class="popverbox">
+				<ul>
+					<li>
+						<label class="inline-block pull-left">节点名称：</label>
+						<span class="inline-block pull-left">110105199408286510110105199408286510110105199408286510</span>
+					</li>
+					<li>
+						<label class="inline-block pull-left">输入路径：</label>
+						<span class="inline-block pull-left">erc</span>
+					</li>
+					<li>
+						<label class="inline-block pull-left">管道ID：</label>
+						<span class="inline-block pull-left">374rt37t652934682943296432964r</span>
+					</li>
+				</ul>
+			</div>
+		</script>
+		<script type="text/html" id="popver_zhuanma">
+			<div class="popverbox">
+				<ul>
+					<li>
+						<label class="inline-block pull-left">节点名称：</label>
+						<span class="inline-block pull-left">TRANSCODE_1643583478369385947584594497549</span>
+					</li>
+					<li>
+						<label class="inline-block pull-left">输出路径：</label>
+						<span class="inline-block pull-left">http://127.0.0.1:8020/clouds_personal/workflow-edit.html</span>
+					</li>
+					<li>
+						<label class="inline-block pull-left">模版ID：</label>
+						<span class="inline-block pull-left">374rt37t652934682943296432964r</span>
+					</li>
+					<li>
+						<label class="inline-block pull-left">模版名称：</label>
+						<span class="inline-block pull-left">WEB端（FLV）－FHD</span>
+					</li>
+				</ul>
+			</div>
+		</script>
+		<script type="text/html" id="popver_jietu">
+			<div class="popverbox">
+				<ul>
+					<li>
+						<label class="inline-block pull-left">节点名称：</label>
+						<span class="inline-block pull-left">ACT_Sanpshot</span>
+					</li>
+					<li>
+						<label class="inline-block pull-left">输出路径：</label>
+						<span class="inline-block pull-left">http://127.0.0.1:8020/clouds_personal/workflow-edit.html</span>
+					</li>
+					<li>
+						<label class="inline-block pull-left">截图时间：</label>
+						<span class="inline-block pull-left">00:00:01</span>
+					</li>
+					<li>
+						<label class="inline-block pull-left">关键帧：</label>
+						<span class="inline-block pull-left">否</span>
+					</li>
+					<li>
+						<label class="inline-block pull-left">截图方式：</label>
+						<span class="inline-block pull-left">单张截图</span>
+					</li>
+				</ul>
+			</div>
+		</script>
+		<script type="text/html" id="popver_wancheng">
+			<div class="popverbox">
+				<ul>
+					<li>
+						<label class="inline-block pull-left">节点名称：</label>
+						<span class="inline-block pull-left">actiriyEnd</span>
+					</li>
+					<li>
+						<label class="inline-block pull-left">完成类型：</label>
+						<span class="inline-block pull-left">手动</span>
+					</li>
+				</ul>
+			</div>
+		</script>
+
+		<script type="text/javascript" src="script/style.js"></script>
+		<script type="text/javascript" src="script/mct.js"></script>
+		<script>
+			$(document).ready(function() {
+
+				var canvas = document.getElementById("topologyLine"),
+					context;
+				if(!canvas.getContext) {
+					alert('你的浏览器不支持 canvas!');
+					return;
+				}
+				context = canvas.getContext('2d');
+				var $height, $lf, $lf1, $lf2, $start, $end;
+				$lf = $("#topologyLine").offset().left;
+				//init
+				$("#col-1").prepend(template("work_jietu", []));
+				$("#col-1").prepend(template("work_zhuanma", []));
+				col1_dang = 1;
+				resizePoint();
+				resizeRoute();
+
+				function resizePoint() {
+					$height = $(".topology-container").innerHeight();
+					canvas.height = $height;
+					$lf1 = $(".node.start").offset().left;
+					$lf2 = $(".node.report").offset().left;
+					$start = $lf1 - $lf;
+					$end = $lf2 - $lf;
+					context.lineWidth = 1;
+					context.strokeStyle = "#c8c8c8";
+					context.moveTo($start, 42 + 0.5);
+					context.lineTo($end, 42 + 0.5);
+					context.stroke();
+					context.closePath();
+				}
+
+				function resizeRoute() {
+					for(var i = 0; i < col1_dang; i++) {
+						context.beginPath();
+						context.strokeStyle = "#c8c8c8";
+						col1_start = $("#col-1 .node:first").offset().left - $lf - 20;
+						col1_end = $(".report").offset().left - $lf - 20;
+						context.moveTo(col1_start + 0.5, (i * 50 + 42) + 0.5);
+						context.lineTo(col1_start + 0.5, ((i + 1) * 50 + 42) + 0.5);
+						context.lineTo(col1_end + 0.5, ((i + 1) * 50 + 42) + 0.5);
+						context.lineTo(col1_end + 0.5, (i * 50 + 42) + 0.5);
+						context.stroke();
+						context.closePath();
+					}
+				}
+
+				$('[data-toggle="popover"]').each(function() {
+					var element = $(this);
+					var id = element.attr('id');
+					var id01 = "popver_" + id;
+					var txt = template(id01, []);
+					element.popover({
+						trigger: 'manual',
+						placement: 'bottom',
+						html: 'true',
+						content: txt,
+					}).on("mouseenter", function() {
+						var _this = this;
+						$(this).popover("show");
+						$(this).siblings(".popover").on("mouseleave", function() {
+							$(_this).popover('hide');
+						});
+					}).on("mouseleave", function() {
+						var _this = this;
+						setTimeout(function() {
+							if(!$(".popover:hover").length) {
+								$(_this).popover("hide");
+							}
+						}, 100);
+					});
+				});
+			})
+		</script>
+	</body>
+
+</html>
