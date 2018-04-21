@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>图片处理服务－－图片处理</title>
+		<title>图片处理服务－－图片样式</title>
 		<script src="script/jquery-1.11.1.min.js" type="text/javascript"></script>
 		<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" title="" rel="stylesheet" />
 		<link title="" href="font/iconfont.css" rel="stylesheet" type="text/css" />
@@ -130,10 +130,10 @@
 							<li>
 								<a class="classa" href="service-image.html">文件管理</a>
 							</li>
-							<li>
+							<li class="on">
 								<a class="classa" href="imageStyle.html">图片样式</a>
 							</li>
-							<li class="on">
+							<li>
 								<a class="classa" href="image-handle.html">图片处理</a>
 							</li>
 							<li>
@@ -440,7 +440,7 @@
 			<div class="form-group">
 				<label class="col-sm-2 control-label">水印图片路径</label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" placeholder="请输入图片路径" id="img_mark_url" />
+					<input type="text" readonly class="form-control" placeholder="请输入图片路径" id="img_mark_url" data-toggle="modal" data-target="#myModal" />
 				</div>
 			</div>
 			<div class="form-group">
@@ -539,118 +539,142 @@
 			</div>
 		</script>
 		<!--img_mark end-->
+		<script type="text/html" id="imgmarsk_url">
+			<div class="margin-b2">
+				<span class="inline-block">图片来源：</span>
+				<select class="form-control inline-block imgsource" style="width: 30%;">
+					<option value="filemanagement">文件管理</option>
+					<option value="imgprocessing">图片处理</option>
+				</select>
+			</div>
+			<div class="masklujing margin-b2" data-toggle="tooltip" data-placement="top" title="">
+				<span class="inline-block">图片路径：</span>
+				<span class="inline-block"></span>
+			</div>
+			<div class="branchcrumb">
+				<table class="table table-hover" style="border: 1px solid #E1E6EB;margin-bottom: 1px;">
+					<thead>
+						<tr><th width="18">&nbsp;</th><th>文件名</th><th>大小</th><th>类型</th><th>创建时间</th></tr>
+					</thead>
+					<tbody id="branchlist">
+						<tr><td colspan="5">正在载入</td></tr>
+					</tbody>
+				</table>
+			</div>
+		</script>
+		<!--imgmarsk_url end-->
 		<script type="text/html" id="words_mark">
-					<div class="form-group">
-							<label class="col-sm-2 control-label">文字内容</label>
-							<div class="col-sm-10" style="position: relative;">
-								<input type="text" class="form-control words_mark_con" value="hello world" maxlength="16" style="padding-right: 58px;">
-								<small class="text-impo hide"></small>
-								<span class="directoryleng"><i>11</i>/16</span>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">文字内容</label>
+				<div class="col-sm-10" style="position: relative;">
+					<input type="text" class="form-control words_mark_con" value="hello world" maxlength="16" style="padding-right: 58px;">
+					<small class="text-impo hide"></small>
+					<span class="directoryleng"><i>11</i>/16</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">文字字体</label>
+				<div class="col-sm-10">
+					<div class="nice-select" name="nice-select" id="wordsmark_fam">
+						<input type="text" value="文泉驿正黑" readonly>
+						<ul>
+							<li class="selected" value="文泉驿正黑"><i></i>文泉驿正黑</li>
+							<li class="" value="文泉微米黑"><i></i>文泉微米黑</li>
+							<li class="" value="方正书宋"><i></i>方正书宋</li>
+							<li class="" value="方正楷体"><i></i>方正楷体</li>
+							<li class="" value="方正黑体"><i></i>方正黑体</li>
+							<li class="" value="方正仿宋"><i></i>方正仿宋</li>
+							<li class="" value="DroidSans Fallback"><i></i>DroidSans Fallback</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">文字大小</label>
+				<div class="col-sm-10">
+					<div class="imgsize">
+						<input type="text" value="40" class="words_mark_con_size" />
+						<div class="numpihandl">
+							<span class="rangincrease"><i class="iconfont icon-uniE"></i></span>
+							<span class="rangereduce"><i class="iconfont icon-uniEA"></i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">文字颜色</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control words_mark_con_color" value="#000000" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">文字阴影</label>
+				<div class="col-sm-10">
+					<div class="adapt_direction">
+						<input type="checkbox" id="textshadow" value="0" name="textshadow">
+						<label for="textshadow" id="textshadow-label"></label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group wordshadow hide">
+				<label class="col-sm-2 control-label">阴影透明度</label>
+				<div class="col-sm-10">
+					<div class="numrangeitem">
+						<div class="numrange">
+							<input type="hidden" class="single-slider" id="wordstxt_transparency-slider" value="100" />
+						</div>
+						<div class="numpicker">
+							<input type="text" class="rangval wordstxt_transparency_rangval" />
+							<div class="numpihandl">
+								<span class="rangincrease wordstxt_transparency_up"><i class="iconfont icon-uniE"></i></span>
+								<span class="rangereduce wordstxt_transparency_down"><i class="iconfont icon-uniEA"></i></span>
 							</div>
 						</div>
-						<div class="form-group">
-							<label class="col-sm-2 control-label">文字字体</label>
-							<div class="col-sm-10">
-								<div class="nice-select" name="nice-select" id="wordsmark_fam">
-									<input type="text" value="文泉驿正黑" readonly>
-									<ul>
-										<li class="selected" value="文泉驿正黑"><i></i>文泉驿正黑</li>
-										<li class="" value="文泉微米黑"><i></i>文泉微米黑</li>
-										<li class="" value="方正书宋"><i></i>方正书宋</li>
-										<li class="" value="方正楷体"><i></i>方正楷体</li>
-										<li class="" value="方正黑体"><i></i>方正黑体</li>
-										<li class="" value="方正仿宋"><i></i>方正仿宋</li>
-										<li class="" value="DroidSans Fallback"><i></i>DroidSans Fallback</li>
-									</ul>
-								</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">水印透明度</label>
+				<div class="col-sm-10">
+					<div class="numrangeitem">
+						<div class="numrange">
+							<input type="hidden" class="single-slider" id="words_transparency-slider" value="100" />
+						</div>
+						<div class="numpicker">
+							<input type="text" class="rangval words_transparency_rangval" />
+							<div class="numpihandl">
+								<span class="rangincrease words_transparency_up"><i class="iconfont icon-uniE"></i></span>
+								<span class="rangereduce words_transparency_down"><i class="iconfont icon-uniEA"></i></span>
 							</div>
 						</div>
-						<div class="form-group">
-							<label class="col-sm-2 control-label">文字大小</label>
-							<div class="col-sm-10">
-								<div class="imgsize">
-									<input type="text" value="40" class="words_mark_con_size" />
-									<div class="numpihandl">
-										<span class="rangincrease"><i class="iconfont icon-uniE"></i></span>
-										<span class="rangereduce"><i class="iconfont icon-uniEA"></i></span>
-									</div>
-								</div>
-							</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">水印位置</label>
+				<div class="col-sm-10">
+					<div class="watermark-positioning words_mark_position">
+						<div class="watermark-positioning-direction">
+							<div class="direction-grid" value="左上">↖</div>
+							<div class="direction-grid" value="上中">↑</div>
+							<div class="direction-grid" value="上右">↗</div>
+							<div class="direction-grid" value="左中">←</div>
+							<div class="direction-grid is-active" value="中中">-</div>
+							<div class="direction-grid" value="右中">→</div>
+							<div class="direction-grid" value="左下">↙</div>
+							<div class="direction-grid" value="左中">↓</div>
+							<div class="direction-grid" value="右下">↘</div>
 						</div>
-						<div class="form-group">
-							<label class="col-sm-2 control-label">文字颜色</label>
-							<div class="col-sm-10">
-								<input type="text" class="form-control words_mark_con_color" value="#000000" />
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="col-sm-2 control-label">文字阴影</label>
-							<div class="col-sm-10">
-								<div class="adapt_direction">
-									<input type="checkbox" id="textshadow" value="0" name="textshadow">
-									<label for="textshadow" id="textshadow-label"></label>
-								</div>
-							</div>
-						</div>
-						<div class="form-group wordshadow hide">
-							<label class="col-sm-2 control-label">阴影透明度</label>
-							<div class="col-sm-10">
-								<div class="numrangeitem">
-									<div class="numrange">
-										<input type="hidden" class="single-slider" id="wordstxt_transparency-slider" value="100" />
-									</div>
-									<div class="numpicker">
-										<input type="text" class="rangval wordstxt_transparency_rangval" />
-										<div class="numpihandl">
-											<span class="rangincrease wordstxt_transparency_up"><i class="iconfont icon-uniE"></i></span>
-											<span class="rangereduce wordstxt_transparency_down"><i class="iconfont icon-uniEA"></i></span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="col-sm-2 control-label">水印透明度</label>
-							<div class="col-sm-10">
-								<div class="numrangeitem">
-									<div class="numrange">
-										<input type="hidden" class="single-slider" id="words_transparency-slider" value="100" />
-									</div>
-									<div class="numpicker">
-										<input type="text" class="rangval words_transparency_rangval" />
-										<div class="numpihandl">
-											<span class="rangincrease words_transparency_up"><i class="iconfont icon-uniE"></i></span>
-											<span class="rangereduce words_transparency_down"><i class="iconfont icon-uniEA"></i></span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="col-sm-2 control-label">水印位置</label>
-							<div class="col-sm-10">
-								<div class="watermark-positioning words_mark_position">
-									<div class="watermark-positioning-direction">
-										<div class="direction-grid" value="左上">↖</div>
-										<div class="direction-grid" value="上中">↑</div>
-										<div class="direction-grid" value="上右">↗</div>
-										<div class="direction-grid" value="左中">←</div>
-										<div class="direction-grid is-active" value="中中">-</div>
-										<div class="direction-grid" value="右中">→</div>
-										<div class="direction-grid" value="左下">↙</div>
-										<div class="direction-grid" value="左中">↓</div>
-										<div class="direction-grid" value="右下">↘</div>
-									</div>
-									<div class="watermark-positioning-paddings">
-										<div class="t_layout">
-											<span class="t_layout_item">垂直边距</span>
-											<span class="t_layout_input"><input type="text" value="10" class="words_vertical_margin" /> </span>
-											<span class="t_layout_item">px<px>
+						<div class="watermark-positioning-paddings">
+							<div class="t_layout">
+								<span class="t_layout_item">垂直边距</span>
+								<span class="t_layout_input"><input type="text" value="10" class="words_vertical_margin" /> </span>
+								<span class="t_layout_item">px<px>
 						</div>
 						<div class="t_layout">
 									<span class="t_layout_item">水平边距</span>
-											<span class="t_layout_input"><input type="text" value="10" class="words_horizonal_margin" /> </span>
-											<span class="t_layout_item">px<px>
+								<span class="t_layout_input"><input type="text" value="10" class="words_horizonal_margin" /> </span>
+								<span class="t_layout_item">px<px>
 						</div>
 							</div>
 						</div>
@@ -681,64 +705,64 @@
 								<div class="col-sm-10">
 									<div class="protection_suffix">
 										<span class="protection_suffix_inner clearfix"></span>
-											<i class="iconfont icon-uniED2 protection_suffix_arrow"></i>
-										</div>
-										<div class="protection_suffix_menu">
-											<ul>
-												<li class="" value="*"><i></i>*</li>
-												<li class="" value="png"><i></i>png</li>
-												<li class="" value="jpg"><i></i>jpg</li>
-												<li class="" value="jpeg"><i></i>jpeg</li>
-												<li class="" value="gif"><i></i>gif</li>
-												<li class="" value="bmp"><i></i>bmp</li>
-												<li class="" value="svg"><i></i>svg</li>
-												<li class="" value="webp"><i></i>webp</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-sm-2 control-label">自定义分隔符</label>
-									<div class="col-sm-10">
-										<div class="inline-block delimiter_item">
-											<span>
-											 <input type="checkbox" class="vod-checkbox" id="delimiter_item-">
-											 <label for="delimiter_item-" class="vod-checkbox-label"></label>
-										 </span>
-											<span>-</span>
-										</div>
-										<div class="inline-block delimiter_item">
-											<span>
-											<input type="checkbox" class="vod-checkbox" id="delimiter_item-_">
-											<label for="delimiter_item-_" class="vod-checkbox-label"></label>
-											</span>
-											<span>_</span>
-										</div>
-										<div class="inline-block delimiter_item">
-											<span>
-											<input type="checkbox" class="vod-checkbox" id="delimiter_item-/">
-											<label for="delimiter_item-/" class="vod-checkbox-label"></label>
-											</span>
-											<span>/</span>
-										</div>
-										<div class="inline-block delimiter_item">
-											<span>
-											<input type="checkbox" class="vod-checkbox" id="delimiter_item-|">
-											<label for="delimiter_item-|" class="vod-checkbox-label"></label>
-											</span>
-											<span>|</span>
-										</div>
-									</div>
-								</div>
-								</form>
+								<i class="iconfont icon-uniED2 protection_suffix_arrow"></i>
+							</div>
+							<div class="protection_suffix_menu">
+								<ul>
+									<li class="" value="*"><i></i>*</li>
+									<li class="" value="png"><i></i>png</li>
+									<li class="" value="jpg"><i></i>jpg</li>
+									<li class="" value="jpeg"><i></i>jpeg</li>
+									<li class="" value="gif"><i></i>gif</li>
+									<li class="" value="bmp"><i></i>bmp</li>
+									<li class="" value="svg"><i></i>svg</li>
+									<li class="" value="webp"><i></i>webp</li>
+								</ul>
 							</div>
 						</div>
 					</div>
-					<div class="imgstylefoot">
-						<button type="button" class="btn btn-primary" id="access_primary">确定</button>
-						<button type="button" class="btn btn-default">取消</button>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">自定义分隔符</label>
+						<div class="col-sm-10">
+							<div class="inline-block delimiter_item">
+								<span>
+											 <input type="checkbox" class="vod-checkbox" id="delimiter_item-">
+											 <label for="delimiter_item-" class="vod-checkbox-label"></label>
+										 </span>
+								<span>-</span>
+							</div>
+							<div class="inline-block delimiter_item">
+								<span>
+											<input type="checkbox" class="vod-checkbox" id="delimiter_item-_">
+											<label for="delimiter_item-_" class="vod-checkbox-label"></label>
+											</span>
+								<span>_</span>
+							</div>
+							<div class="inline-block delimiter_item">
+								<span>
+											<input type="checkbox" class="vod-checkbox" id="delimiter_item-/">
+											<label for="delimiter_item-/" class="vod-checkbox-label"></label>
+											</span>
+								<span>/</span>
+							</div>
+							<div class="inline-block delimiter_item">
+								<span>
+											<input type="checkbox" class="vod-checkbox" id="delimiter_item-|">
+											<label for="delimiter_item-|" class="vod-checkbox-label"></label>
+											</span>
+								<span>|</span>
+							</div>
+						</div>
 					</div>
+					</form>
 				</div>
+			</div>
+			</div>
+			<div class="imgstylefoot">
+				<button type="button" class="btn btn-primary" id="access_primary">确定</button>
+				<button type="button" class="btn btn-default">取消</button>
+			</div>
+			</div>
 		</script>
 		<!--access_settings end-->
 

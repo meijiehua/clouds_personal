@@ -689,6 +689,10 @@ table td.taskemptytd{padding:0;border-bottom: 1px solid #ebeef0!important;backgr
 .protection_suffix_menu li.selected{color: #737373;background-color: #FFFFFF;}
 .protection_suffix_menu li.selected i{background:url(../img/spri_ic.png) -54px 0px}
 .protection_suffix_menu li:hover,.protection_suffix_menu li.focused{color: #73777A;background-color: #F5F7F9;}
+.masklujing{padding: 8px 15px;background-color: #F5F5F5;border-radius: 4px;line-height: 14px;color: #333333;}
+.masklujing span:last-child{width: 85%;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.branchcrumb{max-height: 300px;overflow-y: scroll;}
+.branchcrumb input[type=radio]{cursor: pointer;}
 /**/
 .preview-con.pic_previewitem{height:160px;overflow: hidden;}
 .lisbody{position: absolute;left: 0;top: 0;}

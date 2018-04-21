@@ -755,7 +755,7 @@ $(document).ready(function() {
 			loadbox.remove();
 			delinit();
 		})
-		/*图片处理*/
+		/*样式处理*/
 	function styleListinit() {
 		if($("#imgstyleList").find("tr:not(.emptytr)").length) {
 			$("#exportstyle").prop("disabled", false);
@@ -878,6 +878,7 @@ $(document).ready(function() {
 		$(this).addClass("active").siblings().removeClass("active");
 		if($(".img_mark").hasClass("active")) {
 			$("#imgmarktype").html(template("img_mark", []));
+			imgMask_url();
 			rangsilder(-100, 100, $('#brightness-slider'), $(".brightness_rangval"), $(".imgbrightness_up"), $(".imgbrightness_down"));
 			rangsilder(-100, 100, $('#compare-slider'), $(".compare_rangval"), $(".compare_up"), $(".compare_down"));
 			rangsilder(0, 100, $('#img_transparency-slider'), $(".img_transparency_rangval"), $(".img_transparency_up"), $(".img_transparency_down"));
@@ -902,6 +903,46 @@ $(document).ready(function() {
 	$("body").on("click", ".direction-grid", function() {
 		$(this).addClass("is-active").siblings().removeClass("is-active");
 	});
+
+	function imgMask_url() {
+		$(".modal-header").find("#myModalLabel").text("选择图片路径");
+		$(".modal-body").html(template("imgmarsk_url", []));
+		//默认，tbody里面是文件管理和图片处理里面的所有图片;
+		
+		$(".imgsource").change(function() {//点击select筛选
+			getdata($(this).find("option:selected").val());
+		});
+		//$('[data-toggle="tooltip"]').tooltip();
+	}
+
+	function getdata(selected) {
+		$.ajax({
+			type: "get",
+			url: "json/imglist.js",
+			dataType: 'json',
+			success: function(data) {
+				if(data) {
+					renderSelect(data, selected);
+				}
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown) {
+				console.log("error");
+				alert(XMLHttpRequest.responseText);
+			},
+		});
+	}
+
+	function renderSelect(data, selected) {
+		var _html = "",
+			val = data[selected];
+		if(val) {
+			for(var i = 0, len = val.length; i < len; i++) {
+				console.log("name"+":"+val[i].name);
+				_html += '<tr><td><input type="radio" name="imgurl" /></td><td>' + val[i].name + '</td><td>' + val[i].size + '</td><td>' + val[i].type + '</td><td>' + val[i].creationtime + '</td></tr>';
+			}
+			$("#branchlist").html(_html);
+		}
+	}
 	//全屏显示图片
 	$("body").on("click", "#fullscreen", function() {
 		window.open('example.jpg.html?' + viewimg_width + ',' + viewimg_height, 'top=0,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no, status=no')
@@ -1223,11 +1264,11 @@ $(document).ready(function() {
 	//图片水印位置
 	var imgmarkdirection;
 	var img_vertical_margin = img_horizonal_margin = 0;
-	 $("body").on("click",".direction-grid",function(){
-	  $(".direction-grid").removeClass("is-active");
-	  $(this).addClass("is-active");
-	  console.log($(this).attr("value"));
-	 });
+	$("body").on("click", ".direction-grid", function() {
+		$(".direction-grid").removeClass("is-active");
+		$(this).addClass("is-active");
+		imgmarkdirection = $(this).attr("value");
+	});
 
 	//文字水印内容
 	var wordsmarkcon;
@@ -1420,6 +1461,7 @@ $(document).ready(function() {
 		if(adaptive_direction == true) $("#direction").attr("checked", true);
 		else $("#direction").attr("checked", false);
 		rangsilder(0, 100, $('#imgquality-slider'), $(".imgquality_rangval"), $(".imgquality_up"), $(".imgquality_down"));
+		//silder.jRange('setValue', rangval)
 	});
 
 	//面板取消
@@ -1648,11 +1690,11 @@ $(document).ready(function() {
 		$(this).addClass("active").append(check);
 		var src = $(this).find("img").attr("src");
 		$(".picitem_cl").attr("href", src).find("img").attr("src", src);
-		var con=UM.getEditor('myEditor').getContent();//取得点击前图片对应的富文本内容
+		var con = UM.getEditor('myEditor').getContent(); //取得点击前图片对应的富文本内容
 		console.log(con);
 		if($index != curentIndex) {
 			//当前的图片和点击前图片的index不一致
-			UM.getEditor('myEditor').setContent("");//假如当前的图片此前没有编辑过，则设置富文本的内容为空，/若编辑过，需要把之前编辑的内容放进富文本（"hello  world"）
+			UM.getEditor('myEditor').setContent(""); //假如当前的图片此前没有编辑过，则设置富文本的内容为空，/若编辑过，需要把之前编辑的内容放进富文本（"hello  world"）
 		} else {
 			//当前的图片和点击前图片的index一致
 			UM.getEditor('myEditor').setContent(con);

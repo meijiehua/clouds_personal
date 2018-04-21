@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>有box-shadow效果的三角符号</title>
+		<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+		<script type="text/javascript" src="script/jquery-1.11.1.min.js"></script>
+		<script src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+	</head>
+
+	<body>
+		<select name="" id="imgSelect">
+			<option value="filemanagement">文件管理数据</option>
+			<option value="imgprocessing">图片管理数据</option>
+		</select>
+		<script>
+			function bindEvent() {
+				$('#imgSelect').change(function() {
+					getData($(this).find('option:selected').val())
+				})
+			}
+
+			function getData(selected) {
+				$.ajax({
+					url: '',
+					success: function(data) {
+						if(data) {
+							renderSelect(data, selected)
+						}
+					}
+				})
+			}
+
+			function renderSelect(data, selected) {
+				var _html = '',
+					val = data[selected]
+
+				if(val) {
+					for(var i = 0, len = val.length; i < len; i++) {
+						_html += '<div>名字：' + val.name + '</div>'
+					}
+					$('#target').html(_html)
+				}
+			}
+
+			$(function() {
+				bindEvent()
+			})
+		</script>
+	</body>
+
+</html>

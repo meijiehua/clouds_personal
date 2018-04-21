@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="script/jquery-1.11.1.min.js"></script>
+	</head>
+
+	<body>
+		<script>
+			var $json = {
+				"filemanagement": [{
+					"name": "dhf.jpg",
+					"size": "20mb",
+					"type": "image/jpg",
+					"creationtime": "2018-04-20"
+				}, {
+					"name": "dhfsdcfc.jpg",
+					"size": "20mb",
+					"type": "image/jpg",
+					"creationtime": "2018-04-20"
+				}],
+				"imgprocessing": [{
+					"name": "xds.png",
+					"size": "20mb",
+					"type": "image/png",
+					"creationtime": "2018-04-20"
+				}, {
+					"name": "dhsdfvddff.png",
+					"size": "20mb",
+					"type": "image/png",
+					"creationtime": "2018-04-20"
+				}]
+			}
+			console.log($json.imgprocessing[0].name);
+			console.log(typeof(undefined))
+		</script>
+	</body>
+
+</html>
